@@ -56,7 +56,7 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
       'Pela primeira vez, líderes de um Estado são julgados por um tribunal internacional composto por juízes de quatro potências aliadas.',
     coverImage: IMG.courtroom,
     coverImageAlt: 'Sala de tribunal histórica com bancadas de madeira',
-    author: AUTHORS.helena,
+    author: AUTHORS.daniel,
     publishedAt: '2025-11-20',
     readingTimeMinutes: 6,
     isFeatured: true,

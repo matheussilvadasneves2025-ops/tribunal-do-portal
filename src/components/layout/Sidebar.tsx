@@ -140,7 +140,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
             <div className="mt-6">
               <p className="mb-3 font-ui text-[11px] uppercase tracking-[0.14em] text-[var(--color-ink-muted)]">
-                Em Breve
+                Em Breve. . . 04/08/2026
               </p>
               <div className="flex flex-col gap-1">
                 {INACTIVE_ITEMS.map((item) => (
