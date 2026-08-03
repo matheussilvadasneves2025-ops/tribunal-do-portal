@@ -1,27 +1,27 @@
 import type { NewsArticle, Author } from '@/types/news'
 
 const AUTHORS: Record<string, Author> = {
-  helena: {
-    id: 'helena-marcondes',
-    name: 'Helena Marcondes',
+  daniel: {
+    id: 'daniel-pereira',
+    name: 'Daniel Pereira',
     role: 'Correspondente Internacional',
     avatarInitials: 'HM',
   },
-  teodoro: {
-    id: 'teodoro-vieira',
-    name: 'Teodoro Vieira',
+  Lúis: {
+    id: 'luis-felipe',
+    name: 'Luís Felipe',
     role: 'Editor de Justiça e Direito Internacional',
     avatarInitials: 'TV',
   },
-  clarice: {
-    id: 'clarice-nogueira',
-    name: 'Clarice Nogueira',
+  Ruben: {
+    id: 'ruben-dourado',
+    name: 'Ruben Dourado',
     role: 'Repórter Especial em Nuremberg',
     avatarInitials: 'CN',
   },
-  augusto: {
-    id: 'augusto-fontoura',
-    name: 'Augusto Fontoura',
+  Jarvis: {
+    id: 'jarvis-martins',
+    name: 'Jarvis Martins',
     role: 'Analista de Relações Internacionais',
     avatarInitials: 'AF',
   },
