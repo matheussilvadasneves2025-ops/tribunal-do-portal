@@ -1,7 +1,7 @@
 import type { NewsArticle, Author } from '@/types/news'
 
 const AUTHORS: Record<string, Author> = {
-  daniel: {
+  Daniel: {
     id: 'daniel-pereira',
     name: 'Daniel Pereira',
     role: 'Correspondente Internacional',
@@ -56,7 +56,7 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
       'Pela primeira vez, líderes de um Estado são julgados por um tribunal internacional composto por juízes de quatro potências aliadas.',
     coverImage: IMG.courtroom,
     coverImageAlt: 'Sala de tribunal histórica com bancadas de madeira',
-    author: AUTHORS.daniel,
+    author: AUTHORS.Daniel,
     publishedAt: '2025-11-20',
     readingTimeMinutes: 6,
     isFeatured: true,
@@ -134,7 +134,7 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
       'Documentos e testemunhos apresentados nesta semana reforçam a acusação e detalham a extensão das políticas investigadas pela corte.',
     coverImage: IMG.hearing,
     coverImageAlt: 'Microfone antigo em uma sala de audiências',
-    author: AUTHORS.ruben,
+    author: AUTHORS.Ruben,
     publishedAt: '2025-11-27',
     readingTimeMinutes: 7,
     isFeatured: true,
@@ -204,7 +204,7 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
       'Advogados dos réus contestaram a legitimidade da corte e alegaram que os atos foram cometidos sob ordens superiores durante o conflito.',
     coverImage: IMG.gavelBook,
     coverImageAlt: 'Martelo de juiz sobre um livro fechado',
-    author: AUTHORS.luis,
+    author: AUTHORS.Luis,
     publishedAt: '2025-12-04',
     readingTimeMinutes: 6,
     isFeatured: true,
@@ -278,7 +278,7 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
       'Juristas de diversos países avaliam que os princípios estabelecidos em Nuremberg podem inaugurar uma nova era de responsabilização internacional.',
     coverImage: IMG.parliament,
     coverImageAlt: 'Bandeiras de diferentes países em um prédio institucional',
-    author: AUTHORS.jarvis,
+    author: AUTHORS.Jarvis,
     publishedAt: '2025-12-11',
     readingTimeMinutes: 8,
     isFeatured: true,
