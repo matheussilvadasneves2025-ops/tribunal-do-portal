@@ -125,16 +125,13 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     </>
                   )}
                 </span>
-                <motion.span
-                  animate={{ x: theme === 'dark' ? 16 : 0 }}
-                  transition={{ type: 'spring', stiffness: 400, damping: 28 }}
-                  className="flex h-5 w-9 shrink-0 items-center rounded-full bg-[var(--color-ink)]/15 p-0.5"
-                >
-                  <motion.span
-                    layout
-                    className="h-4 w-4 rounded-full bg-[var(--color-gold)]"
-                  />
-                </motion.span>
+                <span className="flex h-5 w-9 shrink-0 items-center rounded-full bg-[var(--color-ink)]/15 p-0.5">
+  <motion.span
+    animate={{ x: theme === 'dark' ? 16 : 0 }}
+    transition={{ type: 'spring', stiffness: 400, damping: 28 }}
+    className="h-4 w-4 rounded-full bg-[var(--color-gold)]"
+  />
+</span>
               </button>
             </div>
 
