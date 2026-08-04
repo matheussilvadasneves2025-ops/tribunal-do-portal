@@ -133,7 +133,7 @@ export function CinematicIntro({ onComplete }: CinematicIntroProps) {
           <TypewriterText
             key="masthead"
             text={SITE_NAME.toUpperCase()}
-            className="font-editorial text-3xl font-bold tracking-[0.04em] text-[var(--color-paper)] md:text-5xl"
+            className="font-editorial text-3xl font-bold tracking-[0.04em] text-[#f6f0e2] md:text-5xl"
           />
         )}
 
@@ -156,7 +156,7 @@ export function CinematicIntro({ onComplete }: CinematicIntroProps) {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              className="mt-2 font-editorial text-lg italic text-[var(--color-paper)]/85 md:text-xl"
+              className="mt-2 font-editorial text-lg italic text-[#f6f0e2]/85 md:text-xl"
             >
               Tribunal da Segunda Guerra Mundial
             </motion.p>
@@ -169,7 +169,7 @@ export function CinematicIntro({ onComplete }: CinematicIntroProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.9 }}
-              className="mt-8 max-w-md font-ui text-[11px] leading-relaxed text-[var(--color-paper)]/50"
+              className="mt-8 max-w-md font-ui text-[11px] leading-relaxed text-[#f6f0e2]/50"
             >
               Todos os fatos apresentados neste jornal fazem parte de uma
               simulação acadêmica baseada em acontecimentos históricos.
@@ -180,7 +180,7 @@ export function CinematicIntro({ onComplete }: CinematicIntroProps) {
 
       <button
         onClick={handleSkip}
-        className="absolute bottom-8 right-8 font-ui text-xs uppercase tracking-[0.14em] text-[var(--color-paper)]/40 transition-colors hover:text-[var(--color-paper)]/80 focus-visible:outline focus-visible:outline-1 focus-visible:outline-[var(--color-paper)]/60"
+        className="absolute bottom-8 right-8 font-ui text-xs uppercase tracking-[0.14em] text-[#f6f0e2]/40 transition-colors hover:text-[#f6f0e2]/80 focus-visible:outline focus-visible:outline-1 focus-visible:outline-[#f6f0e2]/60"
       >
         Pular introdução →
       </button>
