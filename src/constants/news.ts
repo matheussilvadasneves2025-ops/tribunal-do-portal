@@ -7,8 +7,8 @@ const AUTHORS: Record<string, Author> = {
     role: 'Correspondente Internacional',
     avatarInitials: 'HM',
   },
-  Lúis: {
-    id: 'luis-felipe',
+  Luís: {
+    id: 'luís-felipe',
     name: 'Luís Felipe',
     role: 'Editor de Justiça e Direito Internacional',
     avatarInitials: 'TV',
@@ -204,7 +204,7 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
       'Advogados dos réus contestaram a legitimidade da corte e alegaram que os atos foram cometidos sob ordens superiores durante o conflito.',
     coverImage: IMG.gavelBook,
     coverImageAlt: 'Martelo de juiz sobre um livro fechado',
-    author: AUTHORS.Luis,
+    author: AUTHORS.Luís,
     publishedAt: '2025-12-04',
     readingTimeMinutes: 6,
     isFeatured: true,
