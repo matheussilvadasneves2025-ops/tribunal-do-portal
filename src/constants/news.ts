@@ -128,7 +128,7 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
   {
     id: '2',
     slug: 'urgente-novas-provas-contra-a-alemanha',
-    category: 'testemunhos',
+    category: 'crimes-de-guerra',
     headline: 'URGENTE: novas provas contra a Alemanha nazista vêm à tona no tribunal',
     subheadline:
       'Documentos e testemunhos apresentados nesta semana reforçam a acusação e detalham a extensão das políticas investigadas pela corte.',
@@ -272,7 +272,7 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
   {
     id: '4',
     slug: 'repercussao-internacional-e-legado-juridico',
-    category: 'diplomacia',
+    category: 'analise',
     headline: 'Repercussão internacional aponta para novo capítulo do direito global',
     subheadline:
       'Juristas de diversos países avaliam que os princípios estabelecidos em Nuremberg podem inaugurar uma nova era de responsabilização internacional.',
