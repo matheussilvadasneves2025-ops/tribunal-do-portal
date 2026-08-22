@@ -51,7 +51,7 @@ export const ALEMANHA_TREE: TreeNode = {
       id: 'alemanha-reu',
       label: 'Réu',
       color: 'var(--color-cat-crimes)',
-      children: [{ id: 'ruben', label: 'Ruben', sublabel: 'Interpreta Adolf Hitler' }],
+      children: [{ id: 'ruben', label: 'Ruben', sublabel: 'Interpreta Hermann Göring' }],
     },
   ],
 }
@@ -87,7 +87,7 @@ export const EUA_TREE: TreeNode = {
       id: 'eua-reu',
       label: 'Réu',
       color: 'var(--color-cat-testemunhos)',
-      children: [{ id: 'kaua', label: 'Kauã', sublabel: 'Interpreta Harry Truman' }],
+      children: [{ id: 'kaua', label: 'Kauã', sublabel: 'Interpreta Robert H. Jackson' }],
     },
   ],
 }
