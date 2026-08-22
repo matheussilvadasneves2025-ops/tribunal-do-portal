@@ -20,7 +20,7 @@ export const TRIBUNAL_ALEMANHA: TribunalSide = {
   flagEmoji: '🎖️',
   color: 'var(--color-cat-crimes)',
   members: [
-    { name: 'Ruben', role: 'Réu (interpreta Adolf Hitler)' },
+    { name: 'Ruben', role: 'Réu (interpreta Hermann Göring)' },
     { name: 'João Pedro', role: 'Advogado de Defesa' },
     { name: 'Lucas', role: 'Testemunha' },
     { name: 'Melyssa', role: 'Testemunha' },
@@ -36,7 +36,7 @@ export const TRIBUNAL_EUA: TribunalSide = {
   flagEmoji: '🗽',
   color: 'var(--color-cat-testemunhos)',
   members: [
-    { name: 'Kauã', role: 'Réu (interpreta o Presidente dos EUA)' },
+    { name: 'Kauã', role: 'Réu (interpreta Robert H. Jackson)' },
     { name: 'Letícia Carollini', role: 'Advogada de Defesa' },
     { name: 'Math', role: 'Promotor' },
     { name: 'Maria Eduarda Marques', role: 'Testemunha' },
