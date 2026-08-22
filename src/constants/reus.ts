@@ -11,7 +11,7 @@ export const REUS_PROFILES: ReuProfile[] = [
     id: 'reu-alemanha',
     studentName: 'Ruben',
     characterName: 'Hermann Göring',
-    characterRole: 'Chanceler e Führer da Alemanha Nazista',
+    characterRole: 'Principal réu do julgamento.',
     side: 'eixo',
     photoPlaceholder: '/reus/ruben-goring.jpg',
     bio: 'Hermann Göring foi um dos principais líderes da Alemanha nazista e braço-direito de Adolf Hitler. Foi comandante da Luftwaffe (Força Aérea Alemã) e uma das figuras mais poderosas do regime. Em Nuremberg, foi o principal réu e acabou condenado à morte, mas cometeu suicídio antes da execução.',
