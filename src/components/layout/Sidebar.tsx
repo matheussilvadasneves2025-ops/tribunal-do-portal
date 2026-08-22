@@ -13,13 +13,11 @@ interface SidebarProps {
 const ACTIVE_LINKS = [
   { label: 'Início', to: '/', icon: Home },
   { label: 'Todas as Notícias', to: '/materias', icon: Newspaper },
+  { label: 'Linha do Tempo do Julgamento', to: '/linha-do-tempo', icon: Landmark },
+  { label: 'Perfis dos Réus', to: '/perfis-dos-reus', icon: Users },
+  { label: 'Estrutura do Tribunal', to: '/estrutura-do-tribunal', icon: Users },
+  { label: 'Sobre o Projeto', to: '/sobre', icon: Info },
   { label: 'Créditos', to: '/creditos', icon: Award },
-]
-
-const INACTIVE_ITEMS = [
-  { label: 'Linha do Tempo do Julgamento', icon: Landmark },
-  { label: 'Perfis dos Réus', icon: Users },
-  { label: 'Sobre o Projeto', icon: Info },
 ]
 
 function NavLinkItem({
@@ -99,7 +97,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   label={link.label}
                   to={link.to}
                   Icon={link.icon}
-                  delay={0.08 + i * 0.05}
+                  delay={0.06 + i * 0.04}
                   onClose={onClose}
                 />
               ))}
@@ -126,30 +124,13 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   )}
                 </span>
                 <span className="flex h-5 w-9 shrink-0 items-center rounded-full bg-[var(--color-ink)]/15 p-0.5">
-  <motion.span
-    animate={{ x: theme === 'dark' ? 16 : 0 }}
-    transition={{ type: 'spring', stiffness: 400, damping: 28 }}
-    className="h-4 w-4 rounded-full bg-[var(--color-gold)]"
-  />
-</span>
+                  <motion.span
+                    animate={{ x: theme === 'dark' ? 16 : 0 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 28 }}
+                    className="h-4 w-4 rounded-full bg-[var(--color-gold)]"
+                  />
+                </span>
               </button>
-            </div>
-
-            <div className="mt-6">
-              <p className="mb-3 font-ui text-[11px] uppercase tracking-[0.14em] text-[var(--color-ink-muted)]">
-                Em Breve(04/08/2026)
-              </p>
-              <div className="flex flex-col gap-1">
-                {INACTIVE_ITEMS.map((item) => (
-                  <div
-                    key={item.label}
-                    className="flex cursor-default items-center gap-3 py-2.5 font-ui text-sm text-[var(--color-ink-muted)]/70"
-                  >
-                    <item.icon size={16} strokeWidth={1.75} />
-                    {item.label}
-                  </div>
-                ))}
-              </div>
             </div>
 
             <div className="mt-8">

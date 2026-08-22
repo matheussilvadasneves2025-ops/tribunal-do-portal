@@ -15,6 +15,18 @@ const Home = lazy(() => import('@/pages/Home').then((m) => ({ default: m.Home })
 const Article = lazy(() => import('@/pages/Article').then((m) => ({ default: m.Article })))
 const AllNews = lazy(() => import('@/pages/AllNews').then((m) => ({ default: m.AllNews })))
 const Credits = lazy(() => import('@/pages/Credits').then((m) => ({ default: m.Credits })))
+const EstruturaTribunal = lazy(() =>
+  import('@/pages/EstruturaTribunal').then((m) => ({ default: m.EstruturaTribunal })),
+)
+const PerfisReus = lazy(() =>
+  import('@/pages/PerfisReus').then((m) => ({ default: m.PerfisReus })),
+)
+const LinhaDoTempo = lazy(() =>
+  import('@/pages/LinhaDoTempo').then((m) => ({ default: m.LinhaDoTempo })),
+)
+const SobreProjeto = lazy(() =>
+  import('@/pages/SobreProjeto').then((m) => ({ default: m.SobreProjeto })),
+)
 const NotFound = lazy(() => import('@/pages/NotFound').then((m) => ({ default: m.NotFound })))
 
 function PageFallback() {
@@ -50,6 +62,10 @@ function App() {
                         <Route path="/materia/:slug" element={<Article />} />
                         <Route path="/materias" element={<AllNews />} />
                         <Route path="/creditos" element={<Credits />} />
+                        <Route path="/estrutura-do-tribunal" element={<EstruturaTribunal />} />
+                        <Route path="/perfis-dos-reus" element={<PerfisReus />} />
+                        <Route path="/linha-do-tempo" element={<LinhaDoTempo />} />
+                        <Route path="/sobre" element={<SobreProjeto />} />
                         <Route path="*" element={<NotFound />} />
                       </Routes>
                     </AnimatePresence>

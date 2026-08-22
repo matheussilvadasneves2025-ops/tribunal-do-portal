@@ -4,27 +4,22 @@ export const CATEGORIES: CategoryMeta[] = [
   {
     id: 'julgamento',
     label: 'O Julgamento',
-    description: 'Cobertura das sessões e decisões do tribunal',
+    description: 'Como funciona o Tribunal Militar Internacional e o que ele julga',
   },
   {
-    id: 'testemunhos',
-    label: 'Testemunhos',
-    description: 'Relatos de vítimas, sobreviventes e observadores',
+    id: 'estrutura-tribunal',
+    label: 'Estrutura do Tribunal',
+    description: 'Juízes, promotores, advogados de defesa e testemunhas do processo',
   },
   {
     id: 'crimes-de-guerra',
     label: 'Crimes de Guerra',
-    description: 'Apuração das acusações e provas apresentadas',
-  },
-  {
-    id: 'diplomacia',
-    label: 'Diplomacia',
-    description: 'Repercussão internacional e reconstrução do direito',
+    description: 'Apuração dos crimes cometidos pela Alemanha e por outras nações na Segunda Guerra',
   },
   {
     id: 'analise',
-    label: 'Análise',
-    description: 'Contexto histórico e jurídico aprofundado',
+    label: 'Análise & Dados',
+    description: 'Números, gráficos e o custo humano e material do conflito',
   },
 ]
 
@@ -35,8 +30,7 @@ export const CATEGORY_LABELS: Record<string, string> = CATEGORIES.reduce(
 
 export const CATEGORY_COLORS: Record<string, string> = {
   julgamento: 'var(--color-cat-julgamento)',
-  testemunhos: 'var(--color-cat-testemunhos)',
+  'estrutura-tribunal': 'var(--color-cat-testemunhos)',
   'crimes-de-guerra': 'var(--color-cat-crimes)',
-  diplomacia: 'var(--color-cat-diplomacia)',
   analise: 'var(--color-cat-analise)',
 }
