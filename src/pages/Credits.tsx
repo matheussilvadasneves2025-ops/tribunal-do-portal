@@ -97,7 +97,7 @@ export function Credits() {
       </p>
 
       <p className="mt-3 text-center font-ui text-xs font-medium text-[var(--color-ink)]">
-        Todos os direitos reservados a Matheus & Jarvis.
+        Todos os direitos reservados a Matheus & Jarvis :D
       </p>
     </main>
   )
