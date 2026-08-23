@@ -1,15 +1,20 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { useSearchParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { X } from 'lucide-react'
 import { NewsCard } from '@/components/news/NewsCard'
 import { NewsCardPlaceholder } from '@/components/news/NewsCardPlaceholder'
 import { SearchBar } from '@/components/search/SearchBar'
 import { Skeleton } from '@/components/ui/Skeleton'
 import { newsService } from '@/services/newsService'
 import { PLACEHOLDER_COUNT } from '@/constants/news'
+import { CATEGORIES } from '@/constants/categories'
 import type { NewsArticle } from '@/types/news'
 
 export function AllNews() {
   const [articles, setArticles] = useState<NewsArticle[] | null>(null)
+  const [searchParams, setSearchParams] = useSearchParams()
+  const categoriaFiltro = searchParams.get('categoria')
 
   useEffect(() => {
     let active = true
@@ -21,20 +26,35 @@ export function AllNews() {
     }
   }, [])
 
+  const categoriaAtiva = useMemo(
+    () => CATEGORIES.find((c) => c.id === categoriaFiltro) ?? null,
+    [categoriaFiltro],
+  )
+
+  const articlesFiltrados = useMemo(() => {
+    if (!articles) return null
+    if (!categoriaFiltro) return articles
+    return articles.filter((a) => a.category === categoriaFiltro)
+  }, [articles, categoriaFiltro])
+
+  const limparFiltro = () => {
+    setSearchParams({})
+  }
+
   return (
     <main className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="mb-10 flex flex-col gap-4 border-b border-[var(--color-line)] pb-8 sm:flex-row sm:items-end sm:justify-between"
+        className="mb-6 flex flex-col gap-4 border-b border-[var(--color-line)] pb-8 sm:flex-row sm:items-end sm:justify-between"
       >
         <div>
           <p className="font-ui text-xs uppercase tracking-[0.3em] text-[var(--color-gold)]">
-            Arquivo Completo
+            {categoriaAtiva ? categoriaAtiva.label : 'Arquivo Completo'}
           </p>
           <h1 className="mt-2 font-editorial text-3xl font-bold text-[var(--color-ink)] md:text-4xl">
-            Todas as Matérias
+            {categoriaAtiva ? categoriaAtiva.description : 'Todas as Matérias'}
           </h1>
         </div>
         <div className="sm:hidden">
@@ -42,16 +62,41 @@ export function AllNews() {
         </div>
       </motion.div>
 
-      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-        {articles === null
-          ? Array.from({ length: 6 }).map((_, i) => <GridSkeleton key={i} />)
-          : articles.map((article) => <NewsCard key={article.id} article={article} />)}
+      {categoriaAtiva && (
+        <button
+          onClick={limparFiltro}
+          className="mb-8 flex items-center gap-2 rounded-full border border-[var(--color-line-strong)] px-4 py-1.5 font-ui text-xs uppercase tracking-[0.1em] text-[var(--color-ink-muted)] transition-colors hover:border-[var(--color-gold)] hover:text-[var(--color-gold)]"
+        >
+          <X size={13} />
+          Limpar filtro de categoria
+        </button>
+      )}
 
-        {articles !== null &&
+      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        {articlesFiltrados === null
+          ? Array.from({ length: 6 }).map((_, i) => <GridSkeleton key={i} />)
+          : articlesFiltrados.map((article) => <NewsCard key={article.id} article={article} />)}
+
+        {!categoriaFiltro &&
+          articlesFiltrados !== null &&
           Array.from({ length: PLACEHOLDER_COUNT }).map((_, i) => (
             <NewsCardPlaceholder key={`placeholder-${i}`} index={i} />
           ))}
       </div>
+
+      {articlesFiltrados !== null && articlesFiltrados.length === 0 && (
+        <div className="mt-10 flex flex-col items-center gap-4 py-16 text-center">
+          <p className="font-ui text-sm text-[var(--color-ink-muted)]">
+            Nenhuma matéria publicada nessa categoria ainda.
+          </p>
+          <Link
+            to="/materias"
+            className="font-ui text-sm font-medium text-[var(--color-gold)] hover:underline"
+          >
+            Ver todas as matérias
+          </Link>
+        </div>
+      )}
     </main>
   )
 }

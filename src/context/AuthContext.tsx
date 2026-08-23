@@ -4,7 +4,7 @@ import type { SessionUser } from '@/services/authService'
 
 interface AuthContextValue {
   user: SessionUser | null
-  signUp: (email: string, password: string) => authService.AuthResult
+  signUp: (name: string, email: string, password: string) => authService.AuthResult
   logIn: (email: string, password: string) => authService.AuthResult
   logOut: () => void
 }
@@ -14,8 +14,8 @@ const AuthContext = createContext<AuthContextValue | null>(null)
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<SessionUser | null>(() => authService.getSession())
 
-  const signUp = (email: string, password: string) => {
-    const result = authService.signUp(email, password)
+  const signUp = (name: string, email: string, password: string) => {
+    const result = authService.signUp(name, email, password)
     if (result.success && result.user) setUser(result.user)
     return result
   }

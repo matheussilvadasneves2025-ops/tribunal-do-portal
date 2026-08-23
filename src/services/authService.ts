@@ -2,11 +2,13 @@ const USERS_STORAGE_KEY = 'tribunal-portal:users'
 const SESSION_STORAGE_KEY = 'tribunal-portal:session'
 
 export interface StoredUser {
+  name: string
   email: string
   password: string
 }
 
 export interface SessionUser {
+  name: string
   email: string
 }
 
@@ -48,6 +50,12 @@ export interface AuthResult {
   user?: SessionUser
 }
 
+export function validateName(name: string): string | null {
+  if (!name.trim()) return 'Informe seu nome ou apelido.'
+  if (name.trim().length < 2) return 'O nome precisa ter ao menos 2 caracteres.'
+  return null
+}
+
 export function validateEmail(email: string): string | null {
   if (!email.trim()) return 'Informe um e-mail.'
   if (!EMAIL_REGEX.test(email.trim())) return 'E-mail inválido.'
@@ -60,7 +68,10 @@ export function validatePassword(password: string): string | null {
   return null
 }
 
-export function signUp(email: string, password: string): AuthResult {
+export function signUp(name: string, email: string, password: string): AuthResult {
+  const nameError = validateName(name)
+  if (nameError) return { success: false, error: nameError }
+
   const emailError = validateEmail(email)
   if (emailError) return { success: false, error: emailError }
 
@@ -68,16 +79,17 @@ export function signUp(email: string, password: string): AuthResult {
   if (passwordError) return { success: false, error: passwordError }
 
   const normalizedEmail = email.trim().toLowerCase()
+  const trimmedName = name.trim()
   const users = readUsers()
 
   if (users.some((u) => u.email === normalizedEmail)) {
     return { success: false, error: 'Este e-mail já está cadastrado.' }
   }
 
-  users.push({ email: normalizedEmail, password })
+  users.push({ name: trimmedName, email: normalizedEmail, password })
   writeUsers(users)
 
-  const sessionUser: SessionUser = { email: normalizedEmail }
+  const sessionUser: SessionUser = { name: trimmedName, email: normalizedEmail }
   setSession(sessionUser)
   return { success: true, user: sessionUser }
 }
@@ -96,7 +108,7 @@ export function logIn(email: string, password: string): AuthResult {
     return { success: false, error: 'E-mail ou senha incorretos.' }
   }
 
-  const sessionUser: SessionUser = { email: normalizedEmail }
+  const sessionUser: SessionUser = { name: found.name, email: found.email }
   setSession(sessionUser)
   return { success: true, user: sessionUser }
 }

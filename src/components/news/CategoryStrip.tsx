@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { CATEGORIES } from '@/constants/categories'
 
 export function CategoryStrip() {
@@ -15,9 +16,12 @@ export function CategoryStrip() {
               transition={{ delay: i * 0.05, duration: 0.4 }}
               className="shrink-0"
             >
-              <span className="font-ui text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-ink-soft)] transition-colors hover:text-[var(--color-gold)]">
+              <Link
+                to={`/materias?categoria=${category.id}`}
+                className="font-ui text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-ink-soft)] transition-colors hover:text-[var(--color-gold)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-gold)]"
+              >
                 {category.label}
-              </span>
+              </Link>
             </motion.div>
           ))}
         </div>

@@ -12,12 +12,14 @@ interface LoginModalProps {
 
 export function LoginModal({ isOpen, onClose }: LoginModalProps) {
   const [mode, setMode] = useState<'login' | 'signup'>('login')
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string | null>(null)
   const { signUp, logIn } = useAuth()
 
   const resetAndClose = () => {
+    setName('')
     setEmail('')
     setPassword('')
     setError(null)
@@ -26,7 +28,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const result = mode === 'login' ? logIn(email, password) : signUp(email, password)
+    const result = mode === 'login' ? logIn(email, password) : signUp(name, email, password)
     if (!result.success) {
       setError(result.error ?? 'Não foi possível continuar.')
       return
@@ -85,6 +87,24 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
             </p>
 
             <form onSubmit={handleSubmit} className="mt-7 flex flex-col gap-4">
+              {mode === 'signup' && (
+                <label className="flex flex-col gap-1.5">
+                  <span className="font-ui text-xs font-medium uppercase tracking-wide text-[var(--color-ink-muted)]">
+                    Nome ou apelido
+                  </span>
+                  <div className="flex items-center gap-2 rounded-sm border border-[var(--color-line-strong)] px-3 py-2.5 transition-colors focus-within:border-[var(--color-gold)]">
+                    <User size={16} className="text-[var(--color-ink-muted)]" />
+                    <input
+                      type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      placeholder="Como quer ser chamado"
+                      className="w-full bg-transparent font-ui text-sm outline-none placeholder:text-[var(--color-ink-muted)]/60"
+                    />
+                  </div>
+                </label>
+              )}
+
               <label className="flex flex-col gap-1.5">
                 <span className="font-ui text-xs font-medium uppercase tracking-wide text-[var(--color-ink-muted)]">
                   E-mail

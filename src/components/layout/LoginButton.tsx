@@ -9,14 +9,21 @@ export function LoginButton() {
   const { user, logOut } = useAuth()
 
   if (user) {
-    const initials = user.email.slice(0, 2).toUpperCase()
+    const initials = user.name
+      .split(' ')
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((part) => part[0])
+      .join('')
+      .toUpperCase()
+
     return (
       <div className="flex items-center gap-2 rounded-full border border-[var(--color-ink)]/15 py-1.5 pl-1.5 pr-3">
         <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[var(--color-gold)] font-ui text-[10px] font-bold text-white">
-          {initials}
+          {initials || 'U'}
         </span>
         <span className="hidden max-w-[120px] truncate font-ui text-sm text-[var(--color-ink)] sm:inline">
-          {user.email}
+          {user.name}
         </span>
         <button
           onClick={logOut}
