@@ -2,6 +2,11 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { CATEGORIES } from '@/constants/categories'
 
+// Categorias que têm uma página própria em vez de lista de matérias
+const CATEGORY_LINK_OVERRIDE: Record<string, string> = {
+  'estrutura-tribunal': '/estrutura-do-tribunal',
+}
+
 export function CategoryStrip() {
   return (
     <section className="border-y border-[var(--color-line)] bg-[var(--color-paper-dark)]">
@@ -17,7 +22,7 @@ export function CategoryStrip() {
               className="shrink-0"
             >
               <Link
-                to={`/materias?categoria=${category.id}`}
+                to={CATEGORY_LINK_OVERRIDE[category.id] ?? `/materias?categoria=${category.id}`}
                 className="font-ui text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-ink-soft)] transition-colors hover:text-[var(--color-gold)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-gold)]"
               >
                 {category.label}

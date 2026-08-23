@@ -128,9 +128,16 @@ export function ArticleContent({ article, onBack, backLabel = 'Voltar' }: Articl
                 />
               </motion.div>
             </AnimatePresence>
-            <p className="mt-3 font-ui text-xs text-[var(--color-ink-muted)]">
+            <p className="mt-3 font-ui text-xs font-medium uppercase tracking-[0.08em] text-[var(--color-ink-muted)]">
               {activeTopic.label}
             </p>
+            {activeTopic.imageCredit && (
+              <p className="mt-1 font-ui text-[11px] leading-relaxed text-[var(--color-ink-muted)]/80">
+                Foto: {activeTopic.imageCredit.photographer}
+                {activeTopic.imageCredit.date && ` · ${activeTopic.imageCredit.date}`}
+                {activeTopic.imageCredit.location && ` · ${activeTopic.imageCredit.location}`}
+              </p>
+            )}
           </div>
         </div>
 
