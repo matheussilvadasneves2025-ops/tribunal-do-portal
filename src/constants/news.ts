@@ -594,12 +594,28 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
         },
         blocks: [
           {
-            type: 'paragraph',
-            text: 'A Segunda Guerra Sino-Japonesa começou oficialmente em julho de 1937, mais de dois anos antes da invasão alemã da Polônia. Após meses de combates intensos na Batalha de Xangai, as forças japonesas avançaram rapidamente rumo a Nanquim, então capital da China Nacionalista sob o governo de Chiang Kai-shek.',
+          type: 'paragraph',
+          text: 'A Segunda Guerra Sino-Japonesa começou oficialmente em julho de 1937, mais de dois anos antes da invasão alemã da Polônia. Após meses de combates intensos na Batalha de Xangai, as forças japonesas avançaram rapidamente rumo a Nanquim, então capital da China Nacionalista sob o governo de Chiang Kai-shek.',
+          },
+          {
+          type: 'paragraph',
+          text: 'Temendo perder suas tropas em um cerco prolongado, Chiang Kai-shek ordenou a retirada de grande parte do exército regular chinês da cidade, deixando sua defesa a cargo de tropas auxiliares mal preparadas. A cidade caiu em 13 de dezembro de 1937, e as forças japonesas, comandadas pelo general Iwane Matsui, entraram encontrando pouca resistência organizada.',
           },
           {
             type: 'paragraph',
-            text: 'Temendo perder suas tropas em um cerco prolongado, Chiang Kai-shek ordenou a retirada de grande parte do exército regular chinês da cidade, deixando sua defesa a cargo de tropas auxiliares mal preparadas. A cidade caiu em 13 de dezembro de 1937, e as forças japonesas, comandadas pelo general Iwane Matsui, entraram encontrando pouca resistência organizada.',
+            text: 'A queda de Nanquim foi seguida por um período de extrema violência contra a população civil e os prisioneiros de guerra chineses. Nas semanas seguintes à ocupação, ocorreram execuções em massa, estupros, saques e outros crimes cometidos por integrantes das forças japonesas. O episódio ficaria conhecido internacionalmente como o Massacre de Nanquim e se tornaria um dos acontecimentos mais controversos e documentados da guerra na Ásia.',
+          },
+          {
+            type: 'paragraph',
+            text: 'As estimativas sobre o número de vítimas variam de acordo com os critérios utilizados pelos pesquisadores, mas organizações e estudos históricos apontam para dezenas ou até centenas de milhares de mortos. A violência atingiu tanto militares capturados quanto civis, incluindo mulheres, crianças e idosos. Relatos de jornalistas estrangeiros, missionários e outros estrangeiros que permaneceram na cidade durante a ocupação ajudaram a registrar os acontecimentos.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Antes da chegada das tropas japonesas, um grupo de estrangeiros havia criado a chamada Zona de Segurança de Nanquim, destinada a proteger civis que não conseguiam fugir da cidade. Liderada por representantes de comunidades internacionais presentes na região, a zona acabou abrigando centenas de milhares de pessoas. Mesmo assim, sua capacidade de proteção era limitada diante da escala da violência e das ações das tropas ocupantes.',
+          },
+          {
+            type: 'paragraph',
+            text: 'O Massacre de Nanquim tornou-se posteriormente um dos principais exemplos dos crimes cometidos durante a expansão militar japonesa na China. A ocupação e a violência contra a população civil contribuíram para aprofundar a resistência chinesa e endurecer a percepção internacional sobre a campanha japonesa. O conflito, que havia começado como uma guerra regional, continuaria se expandindo até se tornar parte fundamental da Segunda Guerra Mundial na Ásia e no Pacífico.',
           },
         ],
       },
@@ -620,11 +636,27 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
           },
           {
             type: 'paragraph',
-            text: 'Nas semanas seguintes à queda da cidade, tropas japonesas conduziram execuções em massa de prisioneiros de guerra e civis, além de saques generalizados, incêndios e um número extremamente alto de casos de violência sexual contra mulheres e meninas. O episódio ficou mundialmente conhecido como o Massacre de Nanquim, ou "Estupro de Nanquim".',
+            text: 'Nas semanas seguintes à queda da cidade, tropas japonesas conduziram execuções em massa de prisioneiros de guerra e civis, além de saques generalizados, incêndios e um número extremamente alto de casos de violência sexual contra mulheres e meninas. O episódio ficou mundialmente conhecido como o Massacre de Nanquim, ou "Estupro de Nanquim", tornando-se um dos acontecimentos mais graves da guerra na Ásia.',
           },
           {
             type: 'paragraph',
-            text: 'O número exato de vítimas é, até hoje, um tema de intenso debate historiográfico entre China e Japão. O Tribunal Militar Internacional para o Extremo Oriente, reunido em Tóquio após a guerra, apresentou estimativas superiores a 200 mil mortos. Pesquisas acadêmicas mais recentes, considerando diferentes recortes geográficos e temporais, situam o número de vítimas fatais dentro de uma faixa que vai de dezenas de milhares a valores próximos de 300 mil, a depender da metodologia utilizada. Ainda que os números precisos sigam sendo discutidos por historiadores, a escala e a gravidade da violência contra a população civil de Nanquim são amplamente documentadas e reconhecidas.',
+            text: 'A violência atingiu diferentes partes da cidade e seus arredores, enquanto milhares de civis tentavam encontrar abrigo ou fugir da área ocupada. Prisioneiros de guerra também foram submetidos a execuções e maus-tratos, apesar das normas internacionais que estabeleciam regras para o tratamento de combatentes capturados. A ausência de uma autoridade civil capaz de controlar a situação contribuiu para o rápido agravamento do cenário.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Diversos estrangeiros que permaneceram em Nanquim durante a ocupação registraram os acontecimentos e ajudaram a preservar evidências da violência. Diários, cartas, fotografias e relatos produzidos por missionários, médicos, professores e outros residentes estrangeiros posteriormente serviriam como importantes fontes para historiadores. Entre essas testemunhas estava John Rabe, um empresário alemão que participou da organização da Zona de Segurança de Nanquim e deixou registros sobre o período.',
+          },
+          {
+            type: 'paragraph',
+            text: 'O número exato de vítimas é, até hoje, um tema de intenso debate historiográfico entre China e Japão. O Tribunal Militar Internacional para o Extremo Oriente, reunido em Tóquio após a guerra, apresentou estimativas superiores a 200 mil mortos. Pesquisas acadêmicas mais recentes, considerando diferentes recortes geográficos e temporais, situam o número de vítimas fatais dentro de uma faixa que vai de dezenas de milhares a valores próximos de 300 mil, a depender da metodologia utilizada.',
+          },
+          {
+            type: 'paragraph',
+            text: 'As diferenças nas estimativas estão relacionadas principalmente à definição da área considerada, ao período analisado e aos tipos de vítimas incluídos nos cálculos. Registros militares, documentos administrativos, testemunhos e estudos demográficos apresentam informações diferentes, fazendo com que historiadores adotem metodologias distintas para calcular o número de mortos. Essas divergências numéricas, entretanto, não significam que a ocorrência da violência seja colocada em dúvida pela historiografia acadêmica.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Ainda que os números precisos sigam sendo discutidos por historiadores, a escala e a gravidade da violência contra a população civil de Nanquim são amplamente documentadas e reconhecidas. O episódio tornou-se um dos principais símbolos dos crimes cometidos durante a ocupação japonesa da China e continua sendo lembrado como parte fundamental da história da Segunda Guerra Sino-Japonesa. Décadas depois, a memória do massacre permanece sensível e influencia as relações e os debates históricos entre China e Japão.',
           },
         ],
       },
@@ -640,18 +672,30 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
         },
         blocks: [
           {
-            type: 'paragraph',
-            text: 'Em meio à violência, um grupo de cerca de vinte estrangeiros que haviam permanecido na cidade, entre missionários, médicos e empresários, formou o Comitê Internacional para a Zona de Segurança de Nanquim. À frente do grupo estava John Rabe, um empresário alemão da Siemens e, ironicamente, membro do Partido Nazista, que usou suas credenciais políticas para negociar com oficiais japoneses.',
-          },
-          {
-            type: 'quote',
-            text: 'Há uma questão de moralidade aqui... é comovente ver como essas pessoas acreditam em mim.',
-            attribution: '(John Rabe, em seu diário)',
-          },
-          {
-            type: 'paragraph',
-            text: 'A Zona de Segurança abrigou entre 200 mil e 250 mil civis chineses, protegendo-os do pior da violência ao redor. Rabe manteve um diário detalhado dos acontecimentos, posteriormente publicado como fonte histórica fundamental sobre o massacre. Ao retornar à Alemanha, tentou alertar as autoridades nazistas sobre os crimes que testemunhara, mas foi interrogado pela Gestapo e impedido de divulgar o que sabia.',
-          },
+          type: 'paragraph',
+          text: 'Em meio à violência, um grupo de cerca de vinte estrangeiros que haviam permanecido na cidade, entre missionários, médicos e empresários, formou o Comitê Internacional para a Zona de Segurança de Nanquim. À frente do grupo estava John Rabe, um empresário alemão da Siemens e, ironicamente, membro do Partido Nazista, que usou suas credenciais políticas para negociar com oficiais japoneses.',
+        },
+        {
+          type: 'quote',
+          text: 'Há uma questão de moralidade aqui... é comovente ver como essas pessoas acreditam em mim.',
+          attribution: '(John Rabe, em seu diário)',
+        },
+        {
+          type: 'paragraph',
+          text: 'A Zona de Segurança abrigou entre 200 mil e 250 mil civis chineses, protegendo-os do pior da violência ao redor. A área foi estabelecida em uma região de Nanquim onde estrangeiros tentaram concentrar a população que buscava proteção durante a ocupação japonesa. Embora não pudesse impedir completamente os abusos, a zona ofereceu abrigo para uma enorme quantidade de pessoas em meio ao caos provocado pela queda da cidade.',
+        },
+        {
+          type: 'paragraph',
+          text: 'Rabe manteve um diário detalhado dos acontecimentos, registrando episódios de violência e as dificuldades enfrentadas pelos civis durante a ocupação. Seus registros, posteriormente publicados, tornaram-se uma das fontes utilizadas por historiadores para reconstruir os acontecimentos de Nanquim. Outros membros do Comitê também produziram relatos e documentos que ajudaram a preservar evidências sobre o período.',
+        },
+        {
+          type: 'paragraph',
+          text: 'A posição de Rabe dentro do Partido Nazista e sua nacionalidade alemã acabaram lhe dando uma influência inesperada diante das autoridades japonesas. Ele utilizou suas conexões e credenciais para tentar intervir em favor dos civis e pressionar oficiais japoneses a respeitarem os limites da Zona de Segurança. Sua atuação tornou-se um dos exemplos mais conhecidos de estrangeiros que permaneceram em Nanquim e tentaram proteger a população durante a ocupação.',
+        },
+        {
+          type: 'paragraph',
+          text: 'Ao retornar à Alemanha, Rabe tentou alertar as autoridades nazistas sobre os crimes que havia testemunhado. No entanto, suas tentativas de divulgar os acontecimentos encontraram forte resistência. Ele foi interrogado pela Gestapo e impedido de divulgar publicamente o conteúdo de seus registros, fazendo com que parte de seu testemunho permanecesse restrita durante anos.',
+        },
         ],
       },
       {
@@ -671,7 +715,19 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
           },
           {
             type: 'paragraph',
-            text: 'O Massacre de Nanquim segue sendo um dos temas mais sensíveis das relações entre China e Japão até os dias atuais. Enquanto a maioria dos historiadores, incluindo pesquisadores japoneses respeitados, reconhece a validade histórica do massacre, o tema ainda é alvo de revisionismo por parte de setores nacionalistas japoneses, o que mantém viva a disputa sobre sua memória. Hoje, o Memorial das Vítimas do Massacre de Nanquim, na China, preserva testemunhos de sobreviventes e documentação histórica do período.',
+            text: 'Os julgamentos realizados após a guerra fizeram parte de um esforço mais amplo dos Aliados para responsabilizar autoridades militares e políticas pelos crimes cometidos durante o conflito. No caso de Nanquim, a responsabilização de oficiais japoneses tornou-se uma questão importante para estabelecer juridicamente a responsabilidade pelos acontecimentos e preservar registros sobre os crimes cometidos durante a ocupação.',
+          },
+          {
+            type: 'paragraph',
+            text: 'O Massacre de Nanquim segue sendo um dos temas mais sensíveis das relações entre China e Japão até os dias atuais. Enquanto a maioria dos historiadores, incluindo pesquisadores japoneses respeitados, reconhece a validade histórica do massacre, o tema ainda é alvo de revisionismo por parte de setores nacionalistas japoneses, o que mantém viva a disputa sobre sua memória.',
+          },
+          {
+            type: 'paragraph',
+            text: 'A forma como o massacre é apresentado nos livros escolares, nos discursos políticos e nas cerimônias de memória continua sendo motivo de controvérsia entre os dois países. Para a China, Nanquim ocupa um lugar central na memória da resistência à invasão japonesa e dos sofrimentos provocados pela guerra. No Japão, por outro lado, existem diferentes interpretações sobre a dimensão dos acontecimentos, embora a historiografia acadêmica reconheça amplamente que graves crimes foram cometidos durante a ocupação.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Hoje, o Memorial das Vítimas do Massacre de Nanquim, na China, preserva testemunhos de sobreviventes e documentação histórica do período. O local funciona como espaço de memória e pesquisa, reunindo documentos, fotografias e relatos relacionados aos acontecimentos de 1937. Décadas após o fim da guerra, a preservação dessas evidências continua desempenhando um papel importante na compreensão histórica do massacre e na memória das vítimas.',
           },
         ],
       },
