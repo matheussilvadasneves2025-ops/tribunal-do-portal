@@ -9,5 +9,5 @@ export const CREDITS: CreditEntry[] = [
     team: ['Ruben', 'Daniel Pereira e', 'Luís'],
   },
   { role: 'Análise Geral', name: 'Matheus' },
-  { role: 'Projeto e Desenvolvimento', name: 'Matheus & Jarvis', note: 'Rick C-137 e Evil Morty' },
+  { role: 'Projeto e Desenvolvimento', name: 'Matheus & Jarvis', note: 'nn gostou? manda uma nota no meu pix' },
 ]
