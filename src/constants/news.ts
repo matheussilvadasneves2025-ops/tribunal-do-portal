@@ -162,7 +162,7 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
           },
           {
             type: 'paragraph',
-            text: 'Em 6 de agosto de 1945, o bombardeiro B-29 "Enola Gay" lançou a bomba "Little Boy" sobre Hiroshima, matando dezenas de milhares de pessoas instantaneamente e elevando o número de vítimas a mais de 100 mil ao longo dos meses seguintes, entre mortes imediatas e por radiação. Três dias depois, em 9 de agosto, a bomba "Fat Man" foi lançada sobre Nagasaki pelo avião "Bockscar", resultando em dezenas de milhares de mortes adicionais.',
+            text: 'Em 6 de agosto de 1945, o bombardeiro B-29 "Enola Gay", comandado pelo coronel Paul Tibbets, lançou sobre Hiroshima a bomba de urânio conhecida como "Little Boy". A explosão destruiu uma grande parte da cidade e provocou dezenas de milhares de mortes imediatamente. Hiroshima havia sido escolhida como alvo devido à sua importância militar e industrial, além de sua concentração populacional e ao fato de ter sofrido relativamente poucos bombardeios convencionais até então. O governo americano também pretendia demonstrar de maneira clara o poder destrutivo da nova arma. Nos meses e anos seguintes, o número de vítimas continuou aumentando devido aos ferimentos, queimaduras, doenças e efeitos da exposição à radiação, fazendo com que o total de mortos associados ao ataque ultrapassasse 100 mil.',
           },
           {
             type: 'quote',
@@ -171,7 +171,27 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
           },
           {
             type: 'paragraph',
-            text: 'A decisão de utilizar as bombas permanece um dos temas mais debatidos da historiografia da guerra. Para os EUA, o argumento oficial era que os ataques evitariam uma invasão terrestre do Japão, que poderia custar centenas de milhares de vidas adicionais, americanas e japonesas. Historiadores continuam divididos sobre se o Japão já estava próximo de se render por outros motivos, e sobre o peso que a entrada da União Soviética na guerra contra o Japão teve nessa decisão final.',
+            text: 'O ataque chocou o Japão e o restante do mundo, mas não levou imediatamente à rendição japonesa. Na época, o governo japonês ainda estava dividido sobre como encerrar a guerra, enquanto suas forças militares continuavam se preparando para uma possível invasão das ilhas principais. Os Estados Unidos, por sua vez, haviam acabado de demonstrar que possuíam uma arma completamente diferente de qualquer outra utilizada anteriormente. O presidente Harry S. Truman autorizou a continuação dos ataques caso o Japão não aceitasse os termos de rendição estabelecidos pelos Aliados.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Três dias depois, em 9 de agosto, outro bombardeiro B-29, o "Bockscar", decolou carregando a bomba de plutônio "Fat Man". O alvo inicial da missão era a cidade de Kokura, onde havia importantes instalações industriais e militares. Entretanto, condições meteorológicas e a presença de nuvens dificultaram a identificação do alvo. A aeronave então seguiu para seu alvo alternativo, Nagasaki. A bomba foi lançada e detonada sobre a cidade, provocando novamente uma enorme destruição e dezenas de milhares de mortes. Assim como em Hiroshima, milhares de pessoas morreram posteriormente em consequência dos ferimentos e da exposição à radiação.'
+          },
+          {
+            type: 'paragraph',
+            text: 'Os dois ataques ocorreram em um momento particularmente decisivo da guerra. Além dos bombardeios atômicos, a União Soviética declarou guerra ao Japão em 8 de agosto e iniciou operações militares contra as forças japonesas na Manchúria no dia seguinte. A entrada soviética alterou significativamente a situação estratégica do Japão, que até então ainda esperava, entre outras possibilidades, utilizar a União Soviética como intermediária para tentar negociar melhores condições de rendição. Com a derrota das forças japonesas na região e a destruição causada pelas bombas atômicas, a liderança japonesa passou a enfrentar uma situação cada vez mais insustentável.'
+          },
+          {
+            type: 'paragraph',
+            text: 'A decisão de utilizar as bombas permanece um dos temas mais debatidos da historiografia da guerra. Para os EUA, o argumento oficial era que os ataques evitariam uma invasão terrestre do Japão, que poderia custar centenas de milhares de vidas adicionais, americanas e japonesas. A Operação Downfall, plano elaborado pelos Aliados para uma possível invasão do arquipélago japonês, previa uma campanha extremamente difícil e potencialmente muito sangrenta. Defensores da decisão argumentam que o uso das bombas acelerou a rendição e evitou uma invasão que poderia prolongar a guerra por meses.'
+          },
+          {
+            type: 'paragraph',
+            text: 'Por outro lado, historiadores continuam divididos sobre a necessidade dos ataques. Alguns argumentam que o Japão já estava próximo de se render e que a entrada da União Soviética na guerra teve um papel tão importante ou até mais decisivo para a decisão japonesa quanto os bombardeios. Outros consideram que a combinação entre a destruição de Hiroshima e Nagasaki, a ameaça de novos ataques nucleares e a ofensiva soviética foi fundamental para convencer a liderança japonesa de que continuar lutando era inviável. O debate também envolve questões militares, diplomáticas e éticas, incluindo a possibilidade de demonstrar a nova arma de outra maneira antes de utilizá-la diretamente contra cidades.'
+          },
+          {
+            type: 'paragraph',
+            text:'Em 15 de agosto de 1945, o imperador Hirohito anunciou pelo rádio a decisão do Japão de aceitar os termos de rendição dos Aliados. A rendição formal foi assinada em 2 de setembro de 1945, a bordo do encouraçado USS Missouri, encerrando oficialmente a Segunda Guerra Mundial. Os bombardeios de Hiroshima e Nagasaki, entretanto, deixaram um legado que ultrapassou o fim do conflito. Além das enormes perdas humanas, os ataques inauguraram de forma concreta a era das armas nucleares e deram início a debates sobre seus efeitos, sua utilização em guerras e os riscos de uma futura corrida armamentista entre grandes potências.'
           },
         ],
       },
@@ -188,12 +208,37 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
         blocks: [
           {
             type: 'paragraph',
-            text: 'Em 15 de agosto de 1945, o imperador Hirohito anunciou pela primeira vez em transmissão de rádio a rendição do Japão, um evento tão inédito para a população japonesa quanto os próprios bombardeios: era a primeira vez que a voz de um imperador era ouvida publicamente. A rendição formal foi assinada em 2 de setembro, a bordo do encouraçado USS Missouri, ancorado na Baía de Tóquio, encerrando oficialmente a Segunda Guerra Mundial.',
+            text: 'Em 15 de agosto de 1945, o imperador Hirohito anunciou pela primeira vez, em uma transmissão de rádio para toda a população, a decisão do Japão de aceitar os termos de rendição impostos pelos Aliados. O pronunciamento foi um acontecimento histórico não apenas por marcar o fim da guerra para o Japão, mas também porque era a primeira vez que a maioria dos cidadãos japoneses ouvia diretamente a voz do imperador. A transmissão havia sido cuidadosamente preparada, e a linguagem utilizada por Hirohito era formal e indireta, seguindo a tradição imperial da época. Para muitos japoneses, compreender imediatamente que aquelas palavras significavam a derrota do país não foi simples.',
           },
           {
             type: 'paragraph',
-            text: 'Hiroshima e Nagasaki permanecem, até hoje, os únicos usos de armas nucleares em um conflito armado. O episódio inaugurou a chamada Era Atômica e deu início à corrida armamentista que definiria grande parte da Guerra Fria nas décadas seguintes.',
+            text: 'A notícia provocou uma enorme mudança no cotidiano japonês. Depois de anos de guerra, propaganda militar, escassez de alimentos e ataques aéreos, a população finalmente recebeu a confirmação de que o conflito havia terminado. Ao mesmo tempo, o país encontrava-se profundamente destruído. Grandes cidades haviam sido devastadas por bombardeios convencionais e nucleares, milhões de pessoas estavam deslocadas e a infraestrutura econômica e industrial havia sofrido danos significativos. A rendição também marcou o início de um período de ocupação e reconstrução sob supervisão das forças aliadas.',
           },
+          {
+            type: 'paragraph',
+            text: 'Apesar do anúncio de 15 de agosto, a rendição ainda precisava ser formalizada oficialmente. Isso ocorreu em 2 de setembro de 1945, a bordo do encouraçado USS Missouri, ancorado na Baía de Tóquio. Representantes do governo e das forças armadas japonesas assinaram o documento de rendição diante de representantes das potências aliadas. Pelo Japão, a assinatura foi realizada pelo ministro das Relações Exteriores Mamoru Shigemitsu e pelo general Yoshijiro Umezu. Do lado aliado, o ato foi conduzido pelo general Douglas MacArthur, que representava as potências vencedoras.'
+          },
+          {
+            type: 'paragraph',
+            text: 'A cerimônia foi relativamente curta, mas carregava um enorme significado histórico. O USS Missouri havia sido escolhido como local da assinatura por sua importância simbólica e militar. Naquele momento, o Japão passava oficialmente de uma potência em guerra para um país derrotado e ocupado. A assinatura encerrou formalmente a Segunda Guerra Mundial no teatro do Pacífico, embora diferentes forças e governos envolvidos no conflito tivessem iniciado processos de rendição em momentos distintos.'
+          },
+          {
+            type: 'paragraph',
+            text: 'O fim da guerra também trouxe profundas transformações políticas para o Japão. Durante a ocupação aliada, liderada principalmente pelos Estados Unidos, foram implementadas reformas políticas, econômicas e sociais. O poder militar japonês foi desmantelado, novas instituições foram estabelecidas e o país passou por mudanças que contribuíram para sua transformação em um Estado com uma estrutura política muito diferente daquela existente durante o conflito. A reconstrução seria um processo longo e complexo, marcado tanto pelas consequências da guerra quanto pelas mudanças provocadas pela ocupação.'
+          },
+          {
+            type: 'paragraph',
+            text: 'Hiroshima e Nagasaki permanecem, até hoje, os únicos usos de armas nucleares em um conflito armado. Os ataques demonstraram ao mundo que a humanidade havia alcançado uma capacidade de destruição completamente nova. Diferentemente das armas convencionais, as bombas atômicas combinavam uma enorme quantidade de energia liberada em um período extremamente curto com efeitos que continuavam atingindo os sobreviventes posteriormente. O impacto desses acontecimentos ultrapassou o campo militar e passou a influenciar a ciência, a política internacional e os debates sobre a própria existência das armas nucleares.'
+          },
+          {
+            type: 'paragraph',
+            text: 'O episódio inaugurou a chamada Era Atômica e transformou profundamente a relação entre ciência, tecnologia e poder militar. Poucos anos antes, a fissão nuclear era principalmente objeto de pesquisas científicas; depois de 1945, o domínio dessa tecnologia tornou-se uma questão central de segurança nacional. Os Estados Unidos haviam demonstrado possuir armas nucleares, mas o monopólio americano não duraria para sempre. Em 1949, a União Soviética realizou seu primeiro teste nuclear, encerrando a exclusividade dos Estados Unidos sobre esse tipo de armamento.'
+          },
+          {
+            type: 'paragraph',
+            text: 'A partir daí, começou uma intensa corrida armamentista entre as duas superpotências. Estados Unidos e União Soviética passaram a desenvolver arsenais cada vez maiores e armas progressivamente mais sofisticadas, enquanto outros países posteriormente também desenvolveriam capacidade nuclear. A possibilidade de uma guerra entre grandes potências passou a carregar o risco de uma destruição em escala sem precedentes. Assim, o fim da Segunda Guerra Mundial não representou apenas o encerramento de um dos maiores conflitos da história: também marcou o início de uma nova ordem internacional, na qual a ameaça nuclear permaneceria como um dos principais elementos da política mundial durante toda a Guerra Fria e continuaria influenciando as relações internacionais no século XXI.'
+          },
+
         ],
       },
     ],
