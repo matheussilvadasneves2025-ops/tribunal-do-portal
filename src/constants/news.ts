@@ -101,11 +101,43 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
         blocks: [
           {
             type: 'paragraph',
-            text: 'Em 1939, cientistas como Albert Einstein e Leó Szilárd alertaram o governo americano sobre a possibilidade de a Alemanha nazista desenvolver uma arma baseada na fissão nuclear. A resposta dos Estados Unidos foi o Projeto Manhattan, um programa ultrassecreto que reuniu milhares de cientistas, engenheiros e militares sob a liderança científica de J. Robert Oppenheimer e o comando militar do general Leslie Groves.',
+            text: 'Em 1939, o mundo científico começou a perceber que a recém-descoberta fissão nuclear poderia ter consequências muito maiores do que apenas avanços na pesquisa atômica. Cientistas como Albert Einstein e Leó Szilárd alertaram o governo dos Estados Unidos para a possibilidade de a Alemanha nazista estar investigando a utilização da fissão do urânio para a criação de uma arma de enorme poder destrutivo. A preocupação aumentou devido à importância estratégica do urânio e ao fato de a Alemanha possuir uma comunidade científica altamente desenvolvida antes e durante os primeiros anos da Segunda Guerra Mundial.',
           },
           {
             type: 'paragraph',
-            text: 'Espalhado por instalações como Los Alamos, Oak Ridge e Hanford, o projeto consumiu bilhões de dólares e envolveu descobertas que mudariam para sempre a física e a geopolítica mundial. Em 16 de julho de 1945, no deserto do Novo México, a primeira bomba atômica da história foi detonada no chamado Teste Trinity, confirmando que a arma funcionava antes mesmo do fim da guerra na Europa.',
+            text: 'Em agosto daquele ano, Einstein assinou uma carta, redigida com a participação de Szilárd, que foi enviada ao presidente Franklin D. Roosevelt. O documento chamava atenção para a possibilidade de uma nova classe de armas e para a necessidade de os Estados Unidos acompanharem de perto as pesquisas alemãs. A carta contribuiu para que o governo americano passasse a tratar a pesquisa nuclear como uma questão de segurança nacional. Inicialmente, os esforços ainda eram pequenos e concentrados em estudos científicos, mas a entrada dos Estados Unidos na Segunda Guerra Mundial, em dezembro de 1941, acelerou drasticamente o desenvolvimento do programa.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Em 1942, o governo americano reorganizou os esforços de pesquisa e criou uma estrutura militar para coordenar o desenvolvimento da nova arma. O programa recebeu o nome de Projeto Manhattan e passou a reunir algumas das maiores mentes científicas da época, além de engenheiros, técnicos, operários e militares. O projeto era extremamente secreto, e grande parte dos trabalhadores conhecia apenas uma pequena parte de seu objetivo. A liderança científica foi entregue ao físico J. Robert Oppenheimer, enquanto o general Leslie Groves ficou responsável pela direção militar e pela enorme operação logística necessária para manter o programa funcionando.' 
+          },
+          {
+            type: 'paragraph',
+            text: 'O Projeto Manhattan não era uma única instalação, mas uma rede de centros espalhados pelos Estados Unidos. Em Los Alamos, no estado do Novo México, cientistas trabalharam diretamente no desenvolvimento e na montagem das armas. Em Oak Ridge, no Tennessee, foram construídas enormes instalações destinadas principalmente ao enriquecimento de urânio, processo necessário para obter material adequado para determinadas armas nucleares. Já em Hanford, no estado de Washington, foram produzidas grandes quantidades de plutônio por meio de reatores nucleares especialmente construídos para o projeto.'
+          },
+          {
+            type: 'paragraph',
+            text: 'O tamanho da operação era extraordinário. Milhares de pessoas participaram direta ou indiretamente do programa, desde físicos e químicos até engenheiros, trabalhadores industriais, militares e funcionários administrativos. Muitas delas sequer sabiam exatamente o que estavam ajudando a construir. A segurança era tratada como prioridade absoluta, com informações compartimentalizadas e rígido controle sobre documentos e comunicações. Ao mesmo tempo, o governo investiu enormes quantidades de recursos na construção de cidades e instalações praticamente do zero, transformando locais antes pouco povoados em importantes centros industriais e científicos.'
+          },
+          {
+            type: 'paragraph',
+            text: 'Entre os pesquisadores envolvidos estavam nomes importantes da física do século XX, como Enrico Fermi, Niels Bohr, Hans Bethe, Richard Feynman e Edward Teller. A colaboração entre cientistas de diferentes países também foi fundamental. Muitos pesquisadores europeus haviam deixado seus países devido à ascensão do nazismo e acabaram contribuindo para os esforços aliados. O projeto, portanto, tornou-se uma concentração excepcional de conhecimento científico e tecnológico, combinando pesquisas teóricas sobre o núcleo atômico com desafios de engenharia em uma escala nunca vista anteriormente.'
+          },
+          {
+            type: 'paragraph',
+            text: 'Enquanto o projeto avançava, a situação da guerra também mudava rapidamente. Em maio de 1945, a Alemanha nazista se rendeu, encerrando a guerra na Europa. A ameaça de uma possível bomba alemã havia desaparecido, mas o Projeto Manhattan continuou. Os pesquisadores passaram então a concentrar seus esforços na conclusão das armas e na realização de um teste que comprovasse se toda aquela teoria e engenharia realmente funcionariam.'
+          },
+          {
+            type: 'paragraph',
+            text: 'Em 16 de julho de 1945, nas primeiras horas da manhã, o deserto próximo a Alamogordo, no Novo México, foi palco do Teste Trinity, a primeira detonação de uma arma nuclear da história. A explosão produziu uma quantidade de energia muito superior à de qualquer arma convencional existente até então e demonstrou que os princípios científicos utilizados pelo projeto estavam corretos. O sucesso do teste representou um momento decisivo para a história da humanidade: pela primeira vez, os seres humanos haviam conseguido liberar, de maneira controlada, uma quantidade colossal de energia proveniente de processos nucleares.'
+          },
+          {
+            type: 'paragraph',
+            text: 'O resultado do Trinity também teve consequências que ultrapassaram o campo científico. A existência de armas nucleares alteraria profundamente a estratégia militar, as relações entre as grandes potências e o equilíbrio político internacional. Poucas semanas depois do teste, os Estados Unidos utilizariam armas nucleares contra as cidades japonesas de Hiroshima e Nagasaki, em agosto de 1945, acontecimentos que contribuíram para o fim da Segunda Guerra Mundial e inauguraram uma nova era marcada pela presença permanente das armas nucleares na política mundial.'
+          },
+          {
+            type: 'paragraph',
+            text: 'O Projeto Manhattan, portanto, não foi apenas um programa científico desenvolvido durante a Segunda Guerra Mundial. Ele representou uma mobilização sem precedentes de ciência, indústria, recursos financeiros e poder militar. Seu legado foi ambíguo: ao mesmo tempo em que demonstrou a capacidade da ciência de realizar avanços extraordinários em um período extremamente curto, também revelou o potencial de destruição associado ao conhecimento nuclear. A partir de 1945, a humanidade entrou na chamada era nuclear, e as decisões tomadas durante aqueles anos continuariam influenciando a política internacional, a ciência e a segurança mundial por décadas.'
           },
           {
             type: 'highlight',
