@@ -405,11 +405,39 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
         blocks: [
           {
             type: 'paragraph',
-            text: 'Em 22 de junho de 1941, a Alemanha nazista rompeu o pacto de não agressão assinado com a URSS e lançou a Operação Barbarossa, a maior invasão militar da história, mobilizando mais de três milhões de soldados ao longo de uma frente de milhares de quilômetros. O avanço inicial alemão foi devastador, capturando vastos territórios soviéticos e cercando exércitos inteiros nas primeiras semanas de combate.',
+            text: 'Em 22 de junho de 1941, a Alemanha nazista rompeu o pacto de não agressão assinado com a União Soviética e lançou a Operação Barbarossa, dando início à maior invasão militar da história até aquele momento. Cerca de três milhões de soldados alemães e das potências do Eixo participaram da ofensiva, distribuídos ao longo de uma frente que se estendia por milhares de quilômetros. O ataque surpreendeu grande parte das forças soviéticas e colocou em movimento uma das campanhas militares mais violentas e decisivas da Segunda Guerra Mundial.',
           },
           {
             type: 'paragraph',
-            text: 'A Frente Oriental se tornaria, ao longo dos quatro anos seguintes, o teatro de guerra com o maior número de baixas de toda a Segunda Guerra Mundial, responsável pela esmagadora maioria das perdas militares alemãs no conflito.',
+            text: 'O plano alemão previa uma campanha rápida, baseada na concentração de forças blindadas, na aviação e no avanço coordenado de grandes unidades militares. As forças invasoras foram divididas em três grandes grupos de exércitos, direcionados principalmente para Leningrado, Moscou e a Ucrânia. A estratégia alemã buscava destruir rapidamente o Exército Vermelho em grandes cercos e conquistar vastas áreas do território soviético antes que a resistência pudesse ser reorganizada.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Nas primeiras semanas, o avanço alemão foi devastador. Milhares de soldados soviéticos foram capturados, enquanto grandes extensões de território foram ocupadas pelas tropas invasoras. Diversas unidades do Exército Vermelho foram cercadas e destruídas em enormes batalhas de cerco, e importantes cidades e regiões agrícolas ficaram sob controle alemão. A força aérea soviética também sofreu perdas extremamente pesadas nos primeiros dias do conflito, enquanto a desorganização inicial dificultava a coordenação da defesa.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Entretanto, a União Soviética possuía uma enorme capacidade de mobilização. À medida que as forças alemãs avançavam, fábricas inteiras foram desmontadas e transferidas para regiões mais afastadas da linha de frente, especialmente para os territórios a leste dos Montes Urais. Milhões de novos soldados foram mobilizados, enquanto a indústria soviética passou progressivamente a produzir enormes quantidades de tanques, aviões, artilharia e munições. A resistência, portanto, começou a se tornar cada vez mais organizada conforme a guerra avançava.',
+          },
+          {
+            type: 'paragraph',
+            text: 'A campanha também foi marcada por uma violência extrema contra militares e civis. A invasão alemã não era apenas uma operação militar convencional, mas estava ligada aos objetivos ideológicos e territoriais do regime nazista. Populações consideradas inimigas pelo regime foram submetidas a execuções, deportações, fome planejada e outras formas de perseguição. Comunidades judaicas também foram alvo de assassinatos em massa realizados por unidades especiais alemãs e colaboradores locais, tornando a Frente Oriental um dos principais cenários do genocídio promovido pelo regime nazista.',
+          },
+          {
+            type: 'paragraph',
+            text: 'O avanço alemão começou a encontrar dificuldades cada vez maiores conforme as linhas de suprimento se alongavam. As enormes distâncias do território soviético dificultavam o transporte de combustível, munições, alimentos e equipamentos para as tropas na frente de combate. Além disso, a resistência soviética tornou-se mais intensa, enquanto fatores como o clima e as condições das estradas complicavam ainda mais as operações. A expectativa alemã de uma vitória rápida não se concretizou, e a guerra começou a assumir características de um conflito prolongado.',
+          },
+          {
+            type: 'paragraph',
+            text: 'No final de 1941, as forças alemãs chegaram às proximidades de Moscou, mas encontraram uma resistência soviética muito mais forte do que esperavam. A ofensiva alemã perdeu força, e a União Soviética conseguiu lançar um contra-ataque que afastou as tropas invasoras da capital. O fracasso em alcançar uma vitória decisiva antes do inverno representou um importante sinal de que a Alemanha não conseguiria derrotar a União Soviética rapidamente. A guerra na Frente Oriental entraria então em uma nova fase, cada vez mais desgastante para ambos os lados.',
+          },
+          {
+            type: 'paragraph',
+            text: 'A Frente Oriental se tornaria, ao longo dos quatro anos seguintes, o maior e mais sangrento teatro de operações da Segunda Guerra Mundial. Batalhas como Stalingrado, Kursk e a campanha final até Berlim transformariam o conflito e provocariam perdas humanas em uma escala gigantesca. A esmagadora maioria das perdas militares alemãs ocorreu na luta contra a União Soviética, enquanto as forças soviéticas também sofreram baixas extraordinárias. A partir da resistência ao avanço alemão em 1941, passando pelas grandes contraofensivas soviéticas, o Exército Vermelho gradualmente assumiria a iniciativa e avançaria em direção à Alemanha.',
+          },
+          {
+            type: 'paragraph',
+            text: 'A derrota alemã na Frente Oriental foi fundamental para o resultado da Segunda Guerra Mundial na Europa. Ao longo da campanha, a Alemanha perdeu uma parcela enorme de seus soldados, equipamentos e capacidade militar, enquanto a União Soviética conseguiu reconstruir suas forças e transformar sua indústria em uma gigantesca máquina de guerra. Quando o Exército Vermelho chegou a Berlim em 1945, a guerra na Europa estava chegando ao fim. A Frente Oriental havia deixado de ser apenas uma tentativa alemã de conquistar território soviético e se transformara no principal campo de batalha da destruição do poder militar nazista na Europa.',
           },
         ],
       },
@@ -430,7 +458,15 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
           },
           {
             type: 'paragraph',
-            text: 'Diante da retirada de tropas soviéticas em 1942, Stálin emitiu a Ordem nº 227, que proibia recuos sem autorização expressa.',
+            text: 'Em 1942, após o fracasso da tentativa alemã de conquistar Moscou no ano anterior, Adolf Hitler voltou sua atenção para o sul da União Soviética. A nova ofensiva alemã tinha como um de seus principais objetivos alcançar os campos de petróleo do Cáucaso, fundamentais para o abastecimento da máquina de guerra alemã. Ao mesmo tempo, o controle do rio Volga permitiria interromper uma das principais rotas de transporte soviéticas. Stalingrado, localizada às margens do rio, adquiriu assim uma importância estratégica que ultrapassava seu valor militar imediato.',
+          },
+          {
+            type: 'paragraph',
+            text: 'As forças alemãs avançaram durante o verão de 1942 e chegaram aos arredores de Stalingrado. A cidade havia sido transformada em um importante centro industrial soviético e carregava também um forte valor simbólico por levar o nome de Josef Stálin. A liderança alemã acreditava que a conquista da cidade representaria uma grande vitória política e militar, enquanto os soviéticos consideravam sua defesa essencial para impedir que as forças do Eixo consolidassem sua posição no sul do país.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Diante da retirada de tropas soviéticas em 1942, Stálin emitiu a Ordem nº 227, que proibia recuos sem autorização expressa. A determinação refletia a gravidade da situação enfrentada pelo Exército Vermelho, que havia perdido enormes quantidades de território e sofrido baixas gigantescas desde o início da invasão alemã.',
           },
           {
             type: 'quote',
@@ -439,7 +475,31 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
           },
           {
             type: 'paragraph',
-            text: 'A Batalha de Stalingrado, travada entre agosto de 1942 e fevereiro de 1943, tornou-se um dos combates mais brutais já registrados, com combates urbanos casa a casa. A rendição do 6º Exército alemão em fevereiro de 1943 marcou o primeiro grande cerco de um exército alemão inteiro e é amplamente considerada o ponto de virada da guerra na Frente Oriental.',
+            text: 'A batalha pela cidade rapidamente se transformou em uma luta de desgaste. As forças alemãs conseguiram ocupar grandes partes de Stalingrado, mas encontraram resistência soviética em praticamente todos os setores. Os combates passaram a ocorrer entre edifícios destruídos, fábricas, ruas e posições improvisadas, muitas vezes a curta distância. A destruição da infraestrutura urbana acabou criando obstáculos tanto para os atacantes quanto para os defensores, transformando as ruínas da cidade em posições defensivas.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Enquanto os combates urbanos continuavam, o alto comando soviético preparava uma operação para atacar os flancos das forças alemãs. Grande parte dessas áreas era defendida por tropas romenas, húngaras e italianas, aliadas da Alemanha, que possuíam equipamentos e capacidade antitanque inferiores aos das principais formações alemãs. Em novembro de 1942, os soviéticos lançaram a Operação Urano, uma grande ofensiva que atingiu as posições do Eixo ao norte e ao sul de Stalingrado.',
+          },
+          {
+            type: 'paragraph',
+            text: 'O avanço soviético conseguiu romper as linhas de defesa e cercar as forças alemãs que estavam dentro e ao redor da cidade. Cerca de 250 mil soldados do Eixo ficaram presos no chamado bolsão de Stalingrado. Hitler recusou a autorização para uma retirada e determinou que o 6º Exército permanecesse na posição, esperando que fosse possível abastecê-lo por via aérea e posteriormente romper o cerco. Na prática, a quantidade de suprimentos transportada pelos aviões alemães foi insuficiente para manter as tropas cercadas em condições adequadas de combate.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Durante semanas, os soldados alemães permaneceram isolados enquanto as forças soviéticas apertavam o cerco. A falta de alimentos, combustível, munição e medicamentos agravou progressivamente a situação. Ao mesmo tempo, as tentativas alemãs de romper o cerco pelo exterior fracassaram. O inverno rigoroso e o desgaste das tropas aumentaram ainda mais as dificuldades enfrentadas pelo 6º Exército.',
+          },
+          {
+            type: 'paragraph',
+            text: 'A Batalha de Stalingrado, travada entre agosto de 1942 e fevereiro de 1943, tornou-se um dos combates mais brutais já registrados. A cidade foi praticamente destruída pelos combates, e centenas de milhares de soldados e civis morreram durante a batalha e suas consequências. A escala das perdas transformou Stalingrado em um dos símbolos mais conhecidos da brutalidade da guerra na Frente Oriental.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Em 2 de fevereiro de 1943, as últimas grandes forças alemãs dentro de Stalingrado se renderam. A capitulação do 6º Exército representou uma derrota militar e simbólica de enormes proporções para a Alemanha nazista. Pela primeira vez durante a guerra, uma grande formação alemã havia sido completamente cercada e destruída após uma longa operação de cerco. Embora a Alemanha ainda permanecesse capaz de lutar por mais de dois anos, sua capacidade de manter a iniciativa estratégica na Frente Oriental havia sido profundamente prejudicada.',
+          },
+          {
+            type: 'paragraph',
+            text: 'A Batalha de Stalingrado é amplamente considerada um dos principais pontos de virada da Segunda Guerra Mundial na Frente Oriental. Depois dela, o Exército Vermelho passou progressivamente da defesa para grandes operações ofensivas, recuperando territórios ocupados e avançando cada vez mais em direção ao oeste. A derrota alemã em Stalingrado demonstrou que a União Soviética não apenas havia sobrevivido à invasão, mas também possuía capacidade industrial, militar e humana para reverter o avanço nazista e levar a guerra até o território alemão.',
           },
         ],
       },
@@ -456,11 +516,47 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
         blocks: [
           {
             type: 'paragraph',
-            text: 'Após vencer a Batalha de Kursk em 1943, considerada a maior batalha de tanques da história, o Exército Vermelho iniciou uma ofensiva contínua rumo ao oeste, reconquistando território soviético e avançando pela Europa Oriental. A campanha culminou na Batalha de Berlim, em abril e maio de 1945, quando tropas soviéticas cercaram e tomaram a capital alemã.',
+            text: 'Após vencer a Batalha de Kursk em 1943, considerada a maior batalha de tanques da história, o Exército Vermelho iniciou uma sequência de grandes ofensivas que mudaria definitivamente o equilíbrio da guerra na Europa Oriental. A derrota alemã em Kursk impediu que a Wehrmacht recuperasse a iniciativa estratégica na Frente Oriental e permitiu que as forças soviéticas passassem progressivamente da defesa para operações de grande escala. A partir daquele momento, o avanço alemão iniciado em 1941 seria gradualmente substituído por uma longa retirada em direção ao território da própria Alemanha.',
           },
           {
             type: 'paragraph',
-            text: 'Em 2 de maio de 1945, a icônica fotografia de soldados soviéticos hasteando a bandeira sobre o Reichstag simbolizou o fim do regime nazista na Europa. O custo humano para a União Soviética foi imenso: estima-se que o país tenha sofrido cerca de 27 milhões de mortes durante a guerra, o maior número de qualquer nação envolvida no conflito.',
+            text: 'Nos meses seguintes, as forças soviéticas reconquistaram grandes áreas anteriormente ocupadas pelos alemães. Cidades importantes foram recuperadas, enquanto o Exército Vermelho avançava em direção às fronteiras dos países do Leste Europeu. A velocidade desse avanço variava de acordo com a resistência alemã e as condições do terreno, mas a tendência geral era clara: a Alemanha perdia território e recursos enquanto a União Soviética aumentava sua capacidade ofensiva.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Em 1944, a situação alemã tornou-se ainda mais difícil. A Operação Bagration, lançada em junho daquele ano, destruiu grande parte do Grupo de Exércitos Centro e provocou uma das maiores derrotas militares sofridas pela Alemanha durante toda a guerra. O Exército Vermelho avançou rapidamente através da Bielorrússia e chegou às proximidades da Polônia. Ao mesmo tempo, forças soviéticas continuavam pressionando as posições alemãs em outras regiões da Frente Oriental, reduzindo cada vez mais o espaço disponível para uma retirada organizada.',
+          },
+          {
+            type: 'paragraph',
+            text: 'A ofensiva soviética também levou a guerra para territórios que antes haviam sido ocupados pelo Eixo. Romênia, Bulgária, Hungria e outros países da região passaram a enfrentar diretamente o avanço do Exército Vermelho. A Romênia, por exemplo, abandonou a aliança com a Alemanha em 1944 e mudou de lado, enquanto as forças soviéticas continuavam avançando pelo sudeste europeu. A Alemanha encontrava-se cada vez mais isolada, lutando simultaneamente contra os Aliados Ocidentais e contra a gigantesca ofensiva soviética no leste.',
+          },
+          {
+            type: 'paragraph',
+            text: 'No início de 1945, o Exército Vermelho já estava dentro do território alemão. A ofensiva soviética havia levado suas tropas até o rio Oder, a apenas algumas dezenas de quilômetros de Berlim. A capital alemã estava cercada por uma rede de posições defensivas, mas a Alemanha já não possuía os recursos necessários para impedir o avanço soviético. Tropas experientes haviam sido perdidas em anos de combate, enquanto jovens e idosos eram cada vez mais mobilizados para a defesa do território nacional.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Em abril de 1945, teve início a Batalha de Berlim, uma das últimas grandes operações militares da Segunda Guerra Mundial na Europa. Centenas de milhares de soldados soviéticos participaram da ofensiva, enfrentando as forças alemãs que defendiam a capital. Os combates ocorreram em diferentes bairros da cidade e envolveram artilharia, infantaria e veículos blindados. À medida que as tropas soviéticas avançavam, a resistência alemã diminuía e o centro político do Terceiro Reich ficava cada vez mais isolado.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Enquanto Berlim era cercada, Adolf Hitler permanecia escondido no Führerbunker, localizado sob a Chancelaria do Reich. A situação dentro da capital tornou-se rapidamente insustentável. Em 30 de abril de 1945, Hitler morreu no bunker, quando as forças soviéticas já avançavam pelo centro da cidade. Poucos dias depois, em 2 de maio, as forças alemãs que defendiam Berlim se renderam, encerrando a resistência organizada na capital.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Em 2 de maio de 1945, a icônica fotografia de soldados soviéticos hasteando a bandeira sobre o Reichstag tornou-se um dos símbolos mais conhecidos da derrota da Alemanha nazista. A imagem, registrada pelo fotógrafo Yevgeny Khaldei, representava visualmente a conquista da capital do Reich, embora a fotografia tenha sido posteriormente encenada e retocada para fins de propaganda. Independentemente de suas alterações, a cena tornou-se uma das imagens mais reconhecidas do final da Segunda Guerra Mundial na Europa.',
+          },
+          {
+            type: 'paragraph',
+            text: 'A queda de Berlim marcou o colapso definitivo do regime nazista. Em 7 de maio de 1945, representantes alemães assinaram a rendição incondicional em Reims, na França, e uma segunda cerimônia foi realizada em Berlim no dia seguinte, com a participação soviética. A rendição entrou em vigor em 8 de maio, data conhecida como Dia da Vitória na Europa. Na União Soviética e em diversos países do antigo bloco soviético, a celebração ocorreu oficialmente em 9 de maio devido à diferença de horário.',
+          },
+          {
+            type: 'paragraph',
+            text: 'O custo humano da Frente Oriental foi extraordinário. A União Soviética sofreu cerca de 27 milhões de mortes, entre militares e civis, durante a Segunda Guerra Mundial, o maior número de mortos de qualquer país envolvido no conflito. Milhões de soldados soviéticos morreram em combate, enquanto a população civil enfrentou ocupação, fome, massacres, deportações e destruição de cidades inteiras. Do lado alemão, a Frente Oriental também concentrou a maior parte das perdas militares sofridas pela Wehrmacht.',
+          },
+          {
+            type: 'paragraph',
+            text: 'A marcha do Exército Vermelho até Berlim, portanto, não foi apenas uma sequência de vitórias militares. Ela foi o resultado de quase quatro anos de uma guerra extremamente destrutiva, iniciada com a invasão alemã de 1941 e marcada por algumas das maiores batalhas da história. De Stalingrado e Kursk às grandes ofensivas de 1944 e à queda de Berlim, a União Soviética conseguiu transformar uma situação inicialmente desesperadora em uma campanha que terminou com suas tropas ocupando a capital do país que havia iniciado a invasão. A vitória soviética na Frente Oriental foi, assim, um dos fatores decisivos para a derrota da Alemanha nazista e para o fim da guerra na Europa.',
           },
         ],
       },
