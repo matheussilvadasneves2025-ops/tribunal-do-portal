@@ -50,7 +50,7 @@ export function Footer() {
             de uma simulação acadêmica baseada em acontecimentos históricos.
           </p>
           <p className="mt-1 font-ui text-xs text-[var(--color-ink-muted)]">
-            Todos os direitos reservados a Matheus e Claude.code (os irmãos de guerra).
+            Todos os direitos reservados a Matheus & Jarvis.
           </p>
         </div>
       </div>
