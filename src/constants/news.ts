@@ -276,11 +276,23 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
         blocks: [
           {
             type: 'paragraph',
-            text: 'Nascido em 1889 na cidade austríaca de Braunau am Inn, Adolf Hitler serviu como soldado alemão na Primeira Guerra Mundial antes de ingressar na política em Munique. Em 1923, liderou uma tentativa fracassada de golpe conhecida como Putsch da Cervejaria, que resultou em sua prisão. Foi na cadeia que escreveu "Mein Kampf", livro que expunha sua ideologia racial e expansionista.',
+            text: 'Adolf Hitler nasceu em 20 de abril de 1889, na cidade de Braunau am Inn, então parte do Império Austro-Húngaro. Durante a juventude, mudou-se para Viena, onde tentou seguir uma carreira artística, mas não conseguiu ingressar na Academia de Belas-Artes. Os anos passados em Viena foram marcados por dificuldades financeiras e pelo contato com ideias nacionalistas, antissemitas e pangermânicas que circulavam em determinados setores da sociedade europeia. Em 1913, Hitler mudou-se para Munique, na Alemanha, e pouco depois ingressou no Exército Alemão durante a Primeira Guerra Mundial.',
           },
           {
             type: 'paragraph',
-            text: 'Nomeado chanceler da Alemanha em 30 de janeiro de 1933, Hitler consolidou poder absoluto em poucos meses por meio da Lei de Plenos Poderes e da perseguição a opositores políticos. A chamada Noite dos Longos Facas, em 1934, eliminou rivais internos e consolidou seu controle sobre o Partido Nazista e as forças armadas.',
+            text: 'A guerra teve papel fundamental na formação política de Hitler. Ele serviu como mensageiro e recebeu condecorações por sua atuação, permanecendo no Exército até o fim do conflito. A derrota alemã em 1918 e as condições impostas pelo Tratado de Versalhes alimentaram sua visão extremamente nacionalista e sua crença de que a Alemanha havia sido humilhada e traída. No período de instabilidade política que se seguiu, Hitler passou a se envolver cada vez mais com grupos políticos de extrema direita.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Em 1919, juntou-se ao Partido dos Trabalhadores Alemães, que posteriormente se transformaria no Partido Nacional-Socialista dos Trabalhadores Alemães, o Partido Nazista. Hitler rapidamente se destacou como orador e propagandista, utilizando discursos que exploravam o descontentamento causado pela crise econômica, pelo desemprego e pela instabilidade política da República de Weimar. O partido defendia um nacionalismo radical, o antissemitismo, o anticomunismo e a rejeição da democracia parlamentar.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Em 1923, Hitler tentou tomar o poder por meio do chamado Putsch da Cervejaria, em Munique. A tentativa fracassou, e ele foi preso e condenado. Durante seu período na prisão, escreveu "Mein Kampf", obra na qual apresentou parte de suas ideias políticas e raciais. Após ser libertado, abandonou temporariamente a estratégia de tomada imediata do poder e passou a buscar uma ascensão por meios políticos e eleitorais, enquanto reorganizava o Partido Nazista e ampliava sua estrutura de propaganda.',
+          },
+          {
+            type: 'paragraph',
+            text: 'A Grande Depressão de 1929 criou novas condições para o crescimento do nazismo. O desemprego e a crise econômica aumentaram a insatisfação com o governo, enquanto o Partido Nazista conquistava cada vez mais apoio eleitoral. Em 30 de janeiro de 1933, Hitler foi nomeado chanceler da Alemanha pelo presidente Paul von Hindenburg. A partir daí, utilizou a própria estrutura do Estado para eliminar opositores, restringir liberdades políticas e transformar rapidamente a Alemanha em uma ditadura. Em poucos meses, o regime nazista havia consolidado seu controle sobre as instituições alemãs, dando início a uma das mais violentas ditaduras do século XX.',
           },
         ],
       },
@@ -297,11 +309,23 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
         blocks: [
           {
             type: 'paragraph',
-            text: 'Benito Mussolini nasceu em 1883 em Predappio, na Itália, e começou a vida pública como jornalista e militante socialista, antes de romper com o partido e adotar um nacionalismo autoritário. Em 1919, fundou os Fasci Italiani di Combattimento, movimento que daria origem ao fascismo. Em outubro de 1922, a Marcha sobre Roma pressionou o rei Vítor Emanuel III a nomeá-lo primeiro-ministro.',
+            text: 'Benito Mussolini nasceu em 29 de julho de 1883, em Predappio, na Itália. Filho de uma professora e de um ferreiro que possuía fortes convicções políticas, Mussolini entrou desde cedo em contato com ideias socialistas e passou a atuar como jornalista e militante político. Durante os primeiros anos de sua carreira, tornou-se uma figura conhecida dentro do movimento socialista italiano e chegou a ocupar uma posição importante no jornal oficial do Partido Socialista Italiano.',
           },
           {
             type: 'paragraph',
-            text: 'Governando como "Il Duce", Mussolini implementou um Estado corporativista de partido único e buscou recriar a glória do Império Romano por meio de campanhas expansionistas, como a invasão da Etiópia em 1935. Sua retórica grandiloquente e seus discursos de sacada se tornaram símbolos do culto à personalidade fascista, técnica de propaganda que influenciaria outros regimes autoritários da época, incluindo o nazismo alemão.',
+            text: 'A Primeira Guerra Mundial provocou uma ruptura em sua trajetória. Mussolini inicialmente defendia a posição socialista contrária à entrada da Itália no conflito, mas posteriormente passou a apoiar a participação italiana na guerra. Por causa dessa mudança, rompeu com o Partido Socialista e começou a desenvolver uma visão política baseada no nacionalismo, no militarismo e na ideia de que a Itália deveria ocupar uma posição de maior destaque na Europa. Após servir no Exército italiano, retornou à atividade política em um país profundamente abalado pelas consequências econômicas e sociais da guerra.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Em 1919, Mussolini fundou os Fasci Italiani di Combattimento, movimento que posteriormente daria origem ao Partido Nacional Fascista. Os fascistas exploravam o medo do avanço do socialismo e do comunismo, além do descontentamento de setores da sociedade italiana com a situação econômica e com os resultados obtidos pelo país após a Primeira Guerra Mundial. Grupos fascistas conhecidos como "camisas-negras" passaram a utilizar violência e intimidação contra adversários políticos, sindicatos e organizações de esquerda.',
+          },
+          {
+            type: 'paragraph',
+            text: 'Em outubro de 1922, Mussolini chegou ao poder após a Marcha sobre Roma. Embora o evento tenha envolvido uma demonstração de força fascista, sua ascensão ocorreu dentro da estrutura institucional existente: o rei Victor Emmanuel III convidou Mussolini para formar um governo. Nos anos seguintes, Mussolini desmontou progressivamente as instituições democráticas italianas, restringiu a liberdade de imprensa, perseguiu opositores e concentrou poderes em torno de seu governo. O regime fascista tornou-se uma das primeiras ditaduras de massa da Europa do período entre guerras.',
+          },
+          {
+            type: 'paragraph',
+            text: 'O fascismo italiano também passou a exercer influência sobre movimentos autoritários de outros países. Mussolini buscava transformar a Itália em uma grande potência e defendia a expansão territorial, utilizando a força militar para ampliar a influência italiana. Em 1935, a Itália invadiu a Etiópia, provocando condenação internacional. Apesar de algumas diferenças ideológicas entre o fascismo italiano e o nazismo alemão, os dois regimes encontraram interesses comuns ao longo da década de 1930. Essa aproximação acabaria levando à formação de uma aliança que teria papel central na Segunda Guerra Mundial.',
           },
         ],
       },
@@ -322,11 +346,23 @@ export const FEATURED_ARTICLES: NewsArticle[] = [
           },
           {
             type: 'paragraph',
-            text: 'Em maio de 1939, Alemanha e Itália formalizaram sua aliança militar por meio do Pacto de Aço. Apesar das semelhanças ideológicas, historiadores apontam diferenças relevantes entre os dois regimes: enquanto o nazismo se apoiava fortemente em uma ideologia racial antissemita, o fascismo italiano original era mais focado no nacionalismo estatal, embora tenha adotado leis raciais próprias a partir de 1938.',
+            text: 'Apesar de suas diferenças políticas e das particularidades de seus regimes, Adolf Hitler e Benito Mussolini encontraram interesses em comum durante a década de 1930. Mussolini havia chegado ao poder mais de uma década antes de Hitler e inicialmente via o líder alemão com certa desconfiança. O fascismo italiano possuía características próprias, enquanto o nazismo colocava a ideologia racial e o antissemitismo em uma posição central. Ainda assim, o crescimento do poder alemão e a oposição compartilhada ao comunismo aproximaram os dois governos.'
           },
           {
             type: 'paragraph',
-            text: 'Os destinos dos dois líderes se encerraram de forma abrupta em 1945. Mussolini foi deposto em julho de 1943 e, após ser resgatado pelos alemães, liderou um Estado fantoche no norte da Itália até ser capturado e executado por partisans italianos em abril de 1945. Hitler tirou a própria vida em seu bunker em Berlim em 30 de abril de 1945, enquanto as forças soviéticas cercavam a capital alemã.',
+            text: 'A Guerra Civil Espanhola foi um dos principais momentos dessa aproximação. A partir de 1936, Alemanha e Itália apoiaram as forças nacionalistas lideradas por Francisco Franco contra a República Espanhola. Os dois países forneceram armas, equipamentos, tropas e apoio militar, utilizando o conflito também como oportunidade para testar estratégias e demonstrar sua força internacional. A colaboração na Espanha fortaleceu os vínculos entre Berlim e Roma e mostrou que os dois regimes estavam dispostos a atuar conjuntamente contra movimentos de esquerda.'
+          },
+          {
+            type: 'paragraph',
+            text: 'Em outubro de 1936, Mussolini declarou a existência de um eixo político entre Roma e Berlim, expressão que posteriormente se tornaria conhecida como "Eixo Roma-Berlim". A aproximação continuou nos anos seguintes e, em 1939, Alemanha e Itália assinaram o chamado Pacto de Aço, estabelecendo uma aliança militar mais formal. Pouco depois, a Alemanha iniciou a invasão da Polônia em setembro de 1939, desencadeando a Segunda Guerra Mundial na Europa.'
+          },
+          {
+            type: 'paragraph',
+            text: 'A relação entre Hitler e Mussolini, entretanto, não era baseada apenas em amizade pessoal ou em uma visão política completamente idêntica. Tratava-se também de uma parceria estratégica, na qual cada governo buscava ampliar seu próprio poder e influência. A Alemanha possuía crescente capacidade militar e industrial, enquanto Mussolini pretendia transformar a Itália em uma potência dominante no Mediterrâneo. Os interesses dos dois países frequentemente se sobrepunham, mas também existiam diferenças de objetivos e capacidade militar.'
+          },
+          {
+            type: 'paragraph',
+            text: 'Com o avanço da guerra, a dependência italiana em relação à Alemanha tornou-se cada vez maior. As derrotas sofridas pelas forças italianas em diferentes frentes enfraqueceram o regime de Mussolini, enquanto Hitler passou a exercer influência cada vez maior sobre as decisões militares do Eixo. Em 1943, após o desembarque aliado na Sicília, Mussolini foi deposto e preso por ordem do rei. Posteriormente, foi libertado por uma operação alemã e colocado à frente de um governo fascista no norte da Itália, sob forte dependência alemã. A aliança entre os dois regimes terminaria junto com o colapso das potências do Eixo em 1945.'
           },
           {
             type: 'highlight',
