@@ -18,6 +18,7 @@ categories: 'Categorias',
 switchToEnglish: 'Ver site em inglês',
 switchToPortuguese: 'Ver site em português',
 siteTagline: 'Edição Especial · Trabalho Estudantil',
+siteName: 'Tribunal Distrital',
 siteDescription:
   'Cobertura digital da reconstituição do Tribunal Militar Internacional que julgou a Alemanha nazista, trabalho escolar sobre a Segunda Guerra Mundial.',
 // Hero
@@ -150,6 +151,7 @@ categories: 'Categories',
 switchToEnglish: 'View site in English',
 switchToPortuguese: 'View site in Portuguese',
 siteTagline: 'Special Edition · Student Project',
+siteName: 'District Tribunal',
 siteDescription:
   'Digital coverage of the reenactment of the International Military Tribunal that judged Nazi Germany, a school project on World War II.',
 // Hero

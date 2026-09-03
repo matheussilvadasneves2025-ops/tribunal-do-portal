@@ -99,7 +99,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               {ACTIVE_LINKS.map((link, i) => (
                 <NavLinkItem
                   key={link.to}
-                  labelKey={link.key}
+                  labelKey={link.key as UIKey}
                   to={link.to}
                   Icon={link.icon}
                   delay={0.06 + i * 0.04}

@@ -1,9 +1,12 @@
 import { motion } from 'framer-motion'
 import { SITE_LOGO } from '@/constants/site'
+import { useT } from '@/i18n/ui'
 
-const HEADLINE = 'O Tribunal que redefiniu a justiça internacional'
+
 
 export function Hero() {
+  const t = useT()
+
   return (
     <section className="border-b border-[var(--color-line)] bg-[var(--color-paper)]">
       <div className="mx-auto flex max-w-7xl items-center gap-10 px-5 py-14 md:px-8 md:py-20">
@@ -14,11 +17,11 @@ export function Hero() {
             transition={{ duration: 0.5 }}
             className="font-ui text-xs uppercase tracking-[0.3em] text-[var(--color-gold)]"
           >
-            Edição Especial
+            {t('specialEdition')}
           </motion.p>
 
           <h1 className="mt-4 max-w-3xl text-balance font-editorial text-4xl font-bold leading-[1.08] tracking-tight text-[var(--color-ink)] md:text-6xl">
-            {HEADLINE.split(' ').map((word, wordIndex) => (
+            {t('heroHeadline').split(' ').map((word, wordIndex) => (
               <span key={wordIndex} className="inline-block overflow-hidden align-top">
                 <motion.span
                   initial={{ y: '110%' }}
@@ -50,16 +53,13 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.85 }}
             className="mt-6 max-w-2xl font-ui text-base leading-relaxed text-[var(--color-ink-muted)] md:text-lg"
           >
-            Acompanhe a cobertura especial sobre o Tribunal Militar Internacional
-            de Nuremberg, com sessões, testemunhos, argumentos jurídicos e a
-            repercussão de um processo que mudaria para sempre o direito
-            internacional.
+            {t('heroParagraph')}
           </motion.p>
         </div>
 
         <motion.img
           src={SITE_LOGO}
-          alt="Logo do Tribunal Distrital"
+          alt={t('siteName')}
           initial={{ opacity: 0, scale: 0.9, rotate: -4 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.9, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
