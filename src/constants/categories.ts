@@ -27,6 +27,12 @@ export const CATEGORY_LABELS: Record<string, string> = CATEGORIES.reduce(
   (acc, c) => ({ ...acc, [c.id]: c.label }),
   {},
 )
+export const CATEGORY_LABELS_EN: Record<string, string> = {
+  julgamento: 'The Trial',
+  'estrutura-tribunal': 'Tribunal Structure',
+  'crimes-de-guerra': 'War Crimes',
+  analise: 'Analysis & Data',
+}
 
 export const CATEGORY_COLORS: Record<string, string> = {
   julgamento: 'var(--color-cat-julgamento)',

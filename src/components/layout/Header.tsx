@@ -5,6 +5,7 @@ import { Menu } from 'lucide-react'
 import { SearchBar } from '@/components/search/SearchBar'
 import { Sidebar } from './Sidebar'
 import { LoginButton } from './LoginButton'
+import { LanguageToggle } from '@/components/ui/LanguageToggle'
 import { SITE_NAME, SITE_TAGLINE, SITE_LOGO } from '@/constants/site'
 
 export function Header() {
@@ -61,13 +62,14 @@ export function Header() {
             </span>
           </Link>
 
-          <div className="flex-1">
-            <SearchBar />
-          </div>
-
-          <div className="shrink-0">
+          <SearchBar />
+          
+          <div className="ml-auto flex shrink-0 items-center gap-3">
+            <LanguageToggle />
             <LoginButton />
           </div>
+
+          
         </motion.div>
       </motion.header>
 

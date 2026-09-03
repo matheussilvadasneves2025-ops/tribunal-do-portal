@@ -1,9 +1,11 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { X, Home, Newspaper, Award, Landmark, Users, Info, Sun, Moon } from 'lucide-react'
-import { CATEGORIES, CATEGORY_COLORS } from '@/constants/categories'
+import { CATEGORIES, CATEGORY_COLORS, CATEGORY_LABELS_EN } from '@/constants/categories'
 import { SITE_NAME } from '@/constants/site'
 import { useTheme } from '@/context/ThemeContext'
+import { useT, type UIKey } from '@/i18n/ui'
+import { useLanguage } from '@/context/LanguageContext'
 
 interface SidebarProps {
   isOpen: boolean
@@ -11,28 +13,29 @@ interface SidebarProps {
 }
 
 const ACTIVE_LINKS = [
-  { label: 'Início', to: '/', icon: Home },
-  { label: 'Todas as Notícias', to: '/materias', icon: Newspaper },
-  { label: 'Linha do Tempo do Julgamento', to: '/linha-do-tempo', icon: Landmark },
-  { label: 'Perfis dos Réus', to: '/perfis-dos-reus', icon: Users },
-  { label: 'Estrutura do Tribunal', to: '/estrutura-do-tribunal', icon: Users },
-  { label: 'Sobre o Projeto', to: '/sobre', icon: Info },
-  { label: 'Créditos', to: '/creditos', icon: Award },
+  { key: 'navHome', to: '/', icon: Home },
+  { key: 'navAllNews', to: '/materias', icon: Newspaper },
+  { key: 'navTimeline', to: '/linha-do-tempo', icon: Landmark },
+  { key: 'navDefendants', to: '/perfis-dos-reus', icon: Users },
+  { key: 'navStructure', to: '/estrutura-do-tribunal', icon: Users },
+  { key: 'navAbout', to: '/sobre', icon: Info },
+  { key: 'navCredits', to: '/creditos', icon: Award },
 ]
 
 function NavLinkItem({
-  label,
+  labelKey,
   to,
   Icon,
   delay,
   onClose,
 }: {
-  label: string
+  labelKey: UIKey
   to: string
   Icon: typeof Home
   delay: number
   onClose: () => void
 }) {
+    const t = useT()
   return (
     <motion.div
       initial={{ opacity: 0, x: -16 }}
@@ -46,7 +49,7 @@ function NavLinkItem({
       >
         <Icon size={18} strokeWidth={1.75} />
         <span className="relative">
-          {label}
+          {t(labelKey)}
           <span className="absolute -bottom-1 left-0 h-px w-0 bg-[var(--color-gold)] transition-all duration-300 group-hover:w-full" />
         </span>
       </Link>
@@ -56,6 +59,8 @@ function NavLinkItem({
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const { theme, toggleTheme } = useTheme()
+  const t = useT()
+  const { language } = useLanguage()
 
   return (
     <AnimatePresence>
@@ -72,7 +77,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           <motion.aside
             role="dialog"
             aria-modal="true"
-            aria-label="Menu de navegação"
+            aria-label={t('navMenuLabel')}
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
@@ -83,7 +88,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               <span className="font-editorial text-lg font-semibold">{SITE_NAME}</span>
               <button
                 onClick={onClose}
-                aria-label="Fechar menu"
+                aria-label={t('closeMenu')}
                 className="rounded-full p-2 transition-colors hover:bg-[var(--color-paper-dark)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-gold)]"
               >
                 <X size={20} />
@@ -94,7 +99,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               {ACTIVE_LINKS.map((link, i) => (
                 <NavLinkItem
                   key={link.to}
-                  label={link.label}
+                  labelKey={link.key}
                   to={link.to}
                   Icon={link.icon}
                   delay={0.06 + i * 0.04}
@@ -106,7 +111,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             {/* Alternador de tema */}
             <div className="mt-8 border-b border-[var(--color-line)] pb-6">
               <p className="mb-3 font-ui text-[11px] uppercase tracking-[0.14em] text-[var(--color-ink-muted)]">
-                Aparência
+                {t('appearance')}
               </p>
               <button
                 onClick={toggleTheme}
@@ -115,11 +120,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <span className="flex items-center gap-2.5 font-ui text-sm text-[var(--color-ink)]">
                   {theme === 'paper' ? (
                     <>
-                      <Sun size={16} /> Papel Antigo (padrão)
+                      <Sun size={16} /> {t('themePaper')}
                     </>
                   ) : (
                     <>
-                      <Moon size={16} /> Tema Escuro
+                      <Moon size={16} /> {t('themeDark')}
                     </>
                   )}
                 </span>
@@ -135,7 +140,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
             <div className="mt-8">
               <p className="mb-3 font-ui text-[11px] uppercase tracking-[0.14em] text-[var(--color-ink-muted)]">
-                Categorias
+                {t('categories')}
               </p>
               <div className="flex flex-wrap gap-2">
                 {CATEGORIES.map((category) => (
@@ -144,7 +149,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     style={{ borderColor: CATEGORY_COLORS[category.id], color: CATEGORY_COLORS[category.id] }}
                     className="rounded-full border px-3 py-1 font-ui text-xs"
                   >
-                    {category.label}
+                    {language === 'en' ? CATEGORY_LABELS_EN[category.id] : category.label}
                   </span>
                 ))}
               </div>

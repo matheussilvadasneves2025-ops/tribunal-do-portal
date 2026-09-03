@@ -7,8 +7,11 @@ import { useOnClickOutside } from '@/hooks/useOnClickOutside'
 import { newsService } from '@/services/newsService'
 import type { NewsArticle } from '@/types/news'
 import { CategoryBadge } from '@/components/news/CategoryBadge'
+import { useT } from '@/i18n/ui'
 
 export function SearchBar() {
+  const t = useT()
+
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<NewsArticle[]>([])
   const [isSearching, setIsSearching] = useState(false)
@@ -45,14 +48,14 @@ export function SearchBar() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setIsFocused(true)}
-          placeholder="Pesquisar por título... ex: Alemanha"
-          aria-label="Pesquisar matérias pelo título"
+          placeholder={t('searchPlaceholder')}
+          aria-label={t('searchAriaLabel')}
           className="w-full bg-transparent font-ui text-sm text-[var(--color-ink)] outline-none placeholder:text-[var(--color-ink-muted)]"
         />
         {query && (
           <button
             onClick={() => setQuery('')}
-            aria-label="Limpar pesquisa"
+            aria-label={t('clearSearch')}
             className="shrink-0 text-[var(--color-ink-muted)] transition-colors hover:text-[var(--color-gold)]"
           >
             <X size={15} />
@@ -70,10 +73,10 @@ export function SearchBar() {
             className="absolute left-0 right-0 top-[calc(100%+8px)] z-50 overflow-hidden rounded-md border border-[var(--color-line)] bg-[var(--color-paper)] shadow-xl"
           >
             {isSearching ? (
-              <p className="p-4 font-ui text-sm text-[var(--color-ink-muted)]">Buscando...</p>
+              <p className="p-4 font-ui text-sm text-[var(--color-ink-muted)]">{t('searching')}</p>
             ) : results.length === 0 ? (
               <p className="p-4 font-ui text-sm text-[var(--color-ink-muted)]">
-                Nenhum título encontrado para "{query}".
+                {t('noResultsFor')} "{query}".
               </p>
             ) : (
               <ul>

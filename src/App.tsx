@@ -10,6 +10,7 @@ import { AuthProvider } from '@/context/AuthContext'
 import { ArticleOverlayProvider } from '@/context/ArticleOverlayContext'
 import { ArticleOverlay } from '@/components/news/ArticleOverlay'
 import { ThemeProvider } from '@/context/ThemeContext'
+import { LanguageProvider } from '@/context/LanguageContext'
 
 const Home = lazy(() => import('@/pages/Home').then((m) => ({ default: m.Home })))
 const Article = lazy(() => import('@/pages/Article').then((m) => ({ default: m.Article })))
@@ -38,11 +39,12 @@ function PageFallback() {
   )
 }
 
-function App() {
+export default function App() {
   const { shouldShowIntro, completeIntro } = useIntroSession()
   const location = useLocation()
 
   return (
+    <LanguageProvider>
     <ThemeProvider>
       <AuthProvider>
         <ArticleOverlayProvider>
@@ -78,8 +80,7 @@ function App() {
           </div>
         </ArticleOverlayProvider>
       </AuthProvider>
-    </ThemeProvider>
+        </ThemeProvider>
+  </LanguageProvider>
   )
 }
-
-export default App
