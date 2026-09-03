@@ -5,6 +5,7 @@ import type { NewsArticle } from '@/types/news'
 import { CategoryBadge } from './CategoryBadge'
 import { formatDate } from '@/lib/utils'
 import { cn } from '@/lib/utils'
+import { useT } from '@/i18n/ui'
 
 interface NewsCardProps {
   article: NewsArticle
@@ -13,6 +14,7 @@ interface NewsCardProps {
 }
 
 export function NewsCard({ article, priority = false, className }: NewsCardProps) {
+  const t = useT()
   return (
     <motion.article
       initial={{ opacity: 0, y: 24 }}
@@ -24,7 +26,7 @@ export function NewsCard({ article, priority = false, className }: NewsCardProps
       <Link
         to={`/materia/${article.slug}`}
         className="flex h-full flex-col focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-gold)] focus-visible:outline-offset-4 rounded-sm"
-        aria-label={`Ler matéria: ${article.headline}`}
+        aria-label={`${t('readArticle')}: ${article.headline}`}
       >
         <div className="relative overflow-hidden rounded-sm bg-[var(--color-paper-dark)]">
           <motion.div
@@ -75,7 +77,7 @@ export function NewsCard({ article, priority = false, className }: NewsCardProps
             <span aria-hidden="true">·</span>
             <span className="inline-flex items-center gap-1">
               <Clock size={12} />
-              {article.readingTimeMinutes} min
+              {article.readingTimeMinutes} {t('minRead')}
             </span>
           </div>
         </div>

@@ -5,6 +5,7 @@ import type { NewsArticle } from '@/types/news'
 import { CategoryBadge } from './CategoryBadge'
 import { formatDate } from '@/lib/utils'
 import { useArticleOverlay } from '@/context/ArticleOverlayContext'
+import { useT } from '@/i18n/ui'
 
 interface FeaturedNewsCardProps {
   article: NewsArticle
@@ -12,6 +13,7 @@ interface FeaturedNewsCardProps {
 }
 
 export function FeaturedNewsCard({ article, index }: FeaturedNewsCardProps) {
+  const t = useT()
   const cardRef = useRef<HTMLDivElement>(null)
   const { open } = useArticleOverlay()
 
@@ -38,7 +40,7 @@ export function FeaturedNewsCard({ article, index }: FeaturedNewsCardProps) {
       <button
         onClick={handleOpen}
         className="flex h-full flex-col text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-gold)] focus-visible:outline-offset-4 rounded-sm"
-        aria-label={`Ler matéria: ${article.headline}`}
+        aria-label={`${t('readArticle')}: ${article.headline}`}
       >
         <div className="relative overflow-hidden rounded-sm bg-[var(--color-paper-dark)]">
           <motion.div className="aspect-[4/3] w-full overflow-hidden" whileHover="hover">
@@ -86,7 +88,7 @@ export function FeaturedNewsCard({ article, index }: FeaturedNewsCardProps) {
             <span aria-hidden="true">·</span>
             <span className="inline-flex items-center gap-1">
               <Clock size={12} />
-              {article.readingTimeMinutes} min
+              {article.readingTimeMinutes} {t('minRead')}
             </span>
           </div>
         </div>

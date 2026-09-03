@@ -1,6 +1,7 @@
-import { CATEGORY_LABELS, CATEGORY_COLORS } from '@/constants/categories'
+import { CATEGORY_LABELS, CATEGORY_LABELS_EN, CATEGORY_COLORS } from '@/constants/categories'
 import type { NewsCategory } from '@/types/news'
 import { cn } from '@/lib/utils'
+import { useLanguage } from '@/context/LanguageContext'
 
 interface CategoryBadgeProps {
   category: NewsCategory
@@ -8,6 +9,7 @@ interface CategoryBadgeProps {
 }
 
 export function CategoryBadge({ category, className }: CategoryBadgeProps) {
+  const { language } = useLanguage()
   return (
     <span
       style={{ color: CATEGORY_COLORS[category] }}
@@ -16,7 +18,9 @@ export function CategoryBadge({ category, className }: CategoryBadgeProps) {
         className,
       )}
     >
-      {CATEGORY_LABELS[category] ?? category}
+      {language === 'en'
+  ? CATEGORY_LABELS_EN[category] ?? category
+  : CATEGORY_LABELS[category] ?? category}
     </span>
   )
 }
