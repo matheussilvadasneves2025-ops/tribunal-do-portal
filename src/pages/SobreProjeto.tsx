@@ -1,7 +1,16 @@
 import { motion } from 'framer-motion'
-import { SITE_NAME, SITE_DESCRIPTION } from '@/constants/site'
+
+import { SITE_NAME } from '@/constants/site'
+import { useLanguage } from '@/context/LanguageContext'
+import { ABOUT_TRANSLATIONS } from '@/i18n/about'
+import { useT } from '@/i18n/ui'
 
 export function SobreProjeto() {
+  const t = useT()
+  const { language } = useLanguage()
+
+  const content = ABOUT_TRANSLATIONS[language]
+
   return (
     <main className="mx-auto max-w-2xl px-5 py-20 md:px-8 md:py-28">
       <motion.div
@@ -11,8 +20,9 @@ export function SobreProjeto() {
         className="text-center"
       >
         <p className="font-ui text-xs uppercase tracking-[0.3em] text-[var(--color-gold)]">
-          Sobre o Projeto
+          {content.label}
         </p>
+
         <h1 className="mt-3 font-editorial text-3xl font-bold text-[var(--color-ink)] md:text-4xl">
           {SITE_NAME}
         </h1>
@@ -26,20 +36,16 @@ export function SobreProjeto() {
         className="mt-12 flex flex-col gap-6"
       >
         <p className="font-editorial text-lg leading-[1.85] text-[var(--color-ink-soft)]">
-          {SITE_DESCRIPTION}
+          {t('siteDescription')}
         </p>
+
         <p className="font-editorial text-lg leading-[1.85] text-[var(--color-ink-soft)]">
-          O projeto reconstrói, em formato de portal jornalístico, a
-          reconstituição teatral do Tribunal Militar Internacional que julgou
-          líderes da Alemanha nazista após a Segunda Guerra Mundial. Cada
-          matéria, perfil e dado apresentado aqui integra uma simulação
-          acadêmica com fins didáticos.
+          {content.paragraph}
         </p>
+
         <div className="rounded-sm border border-[var(--color-line-strong)] bg-[var(--color-paper-dark)] px-5 py-4">
           <p className="font-ui text-sm leading-relaxed text-[var(--color-ink-muted)]">
-            Nenhuma fala atribuída neste site a figuras históricas específicas
-            é uma citação real, salvo quando explicitamente identificada como
-            tal e devidamente creditada à fonte original.
+            {content.disclaimer}
           </p>
         </div>
       </motion.div>

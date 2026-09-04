@@ -57,9 +57,9 @@ export function AllNews() {
         <div>
           <p className="font-ui text-xs uppercase tracking-[0.3em] text-[var(--color-gold)]">
             {categoriaAtiva
-  ? (t('siteName') && categoriaAtiva.id
-      ? (CATEGORY_LABELS_EN[categoriaAtiva.id] ?? categoriaAtiva.label)
-      : categoriaAtiva.label)
+  ? language === 'en'
+    ? CATEGORY_LABELS_EN[categoriaAtiva.id] ?? categoriaAtiva.label
+    : categoriaAtiva.label
   : t('fullArchive')}
           </p>
           <h1 className="mt-2 font-editorial text-3xl font-bold text-[var(--color-ink)] md:text-4xl">
