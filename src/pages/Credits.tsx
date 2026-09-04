@@ -2,8 +2,13 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 import { CREDITS } from '@/constants/credits'
+import { useLanguage } from '@/context/LanguageContext'
+import { useT } from '@/i18n/ui'
+import { getCreditTranslation } from '@/i18n/credits'
 
 export function Credits() {
+  const t = useT()
+  const { language } = useLanguage()
   const [expandedRole, setExpandedRole] = useState<string | null>(null)
 
   return (
@@ -15,15 +20,13 @@ export function Credits() {
         className="text-center"
       >
         <p className="font-ui text-xs uppercase tracking-[0.3em] text-[var(--color-gold)]">
-          Créditos
+          {t('credits')}
         </p>
         <h1 className="mt-3 font-editorial text-3xl font-bold text-[var(--color-ink)] md:text-4xl">
-          Agradecimentos
+          {t('acknowledgments')}
         </h1>
         <p className="mx-auto mt-4 max-w-md font-ui text-sm leading-relaxed text-[var(--color-ink-muted)]">
-          Este projeto é uma simulação acadêmica desenvolvida com fins
-          educacionais, reconstruindo em formato jornalístico o Tribunal
-          Militar Internacional de Nuremberg.
+          {t('creditsIntro')}
         </p>
       </motion.div>
 
@@ -34,8 +37,15 @@ export function Credits() {
         className="mt-14 divide-y divide-[var(--color-line)] border-y border-[var(--color-line)]"
       >
         {CREDITS.map((credit) => {
-          const isExpanded = expandedRole === credit.role
-          const hasTeam = Boolean(credit.team?.length)
+  const translation = getCreditTranslation(credit.role)
+
+  const displayCredit =
+    language === 'en' && translation
+      ? { ...credit, ...translation }
+      : credit
+
+  const isExpanded = expandedRole === credit.role
+  const hasTeam = Boolean(displayCredit.team?.length)
 
           return (
             <motion.li
@@ -50,15 +60,15 @@ export function Credits() {
               >
                 <div>
                   <p className="font-editorial text-lg font-medium text-[var(--color-ink)]">
-                    {credit.name}
+                    {displayCredit.name}
                   </p>
-                  {credit.note && (
-                    <p className="font-ui text-xs text-[var(--color-ink-muted)]">{credit.note}</p>
+                  {displayCredit.note && (
+                    <p className="font-ui text-xs text-[var(--color-ink-muted)]">{displayCredit.note}</p>
                   )}
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="font-ui text-xs uppercase tracking-[0.14em] text-[var(--color-ink-muted)]">
-                    {credit.role}
+                    {displayCredit.role}
                   </span>
                   {hasTeam && (
                     <motion.span
@@ -82,7 +92,7 @@ export function Credits() {
                     className="overflow-hidden"
                   >
                     <p className="mt-3 font-ui text-sm text-[var(--color-ink-muted)]">
-                      Equipe: {credit.team!.join(', ')}
+                      {t('team')}: {displayCredit.team!.join(', ')}
                     </p>
                   </motion.div>
                 )}
@@ -93,11 +103,11 @@ export function Credits() {
       </motion.ul>
 
       <p className="mt-14 text-center font-ui text-xs text-[var(--color-ink-muted)]">
-        Seção preparada para futuras edições e novos colaboradores.
+        {t('creditsFooterNote')}
       </p>
 
       <p className="mt-3 text-center font-ui text-xs font-medium text-[var(--color-ink)]">
-        Todos os direitos reservados a Matheus & Jarvis :D
+        {t('allRightsReserved')}
       </p>
     </main>
   )
