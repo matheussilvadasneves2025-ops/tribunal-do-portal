@@ -1,7 +1,17 @@
 import { motion } from 'framer-motion'
 import type { TreeNode } from '@/constants/tribunal-tree'
+import { useLanguage } from '@/context/LanguageContext'
+import { getTreeNodeTranslation } from '@/i18n/tribunal-tree'
 
 function NodeBox({ node, depth }: { node: TreeNode; depth: number }) {
+    const { language } = useLanguage()
+
+  const translation = getTreeNodeTranslation(node.id)
+
+  const displayNode =
+    language === 'en' && translation
+      ? { ...node, ...translation }
+      : node
   return (
     <motion.div
       initial={{ opacity: 0, y: -8 }}
@@ -12,11 +22,11 @@ function NodeBox({ node, depth }: { node: TreeNode; depth: number }) {
       style={{ borderColor: node.color ?? 'var(--color-line-strong)', minWidth: 150 }}
     >
       <p className="font-editorial text-sm font-semibold leading-tight text-[var(--color-ink)]">
-        {node.label}
+        {displayNode.label}
       </p>
-      {node.sublabel && (
+      {displayNode.sublabel && (
         <p className="mt-0.5 font-ui text-[10px] uppercase leading-tight tracking-[0.08em] text-[var(--color-ink-muted)]">
-          {node.sublabel}
+          {displayNode.sublabel}
         </p>
       )}
     </motion.div>

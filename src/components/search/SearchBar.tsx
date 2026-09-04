@@ -8,9 +8,11 @@ import { newsService } from '@/services/newsService'
 import type { NewsArticle } from '@/types/news'
 import { CategoryBadge } from '@/components/news/CategoryBadge'
 import { useT } from '@/i18n/ui'
+import { useLanguage } from '@/context/LanguageContext'
 
 export function SearchBar() {
   const t = useT()
+  const { language } = useLanguage()
 
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<NewsArticle[]>([])
@@ -28,7 +30,7 @@ export function SearchBar() {
       return
     }
     setIsSearching(true)
-    newsService.searchArticles(debouncedQuery).then((found) => {
+    newsService.searchArticles(debouncedQuery, language).then((found) => {
       if (active) {
         setResults(found)
         setIsSearching(false)
@@ -37,7 +39,7 @@ export function SearchBar() {
     return () => {
       active = false
     }
-  }, [debouncedQuery])
+  }, [debouncedQuery, language])
 
   return (
     <div ref={containerRef} className="relative mx-auto w-full max-w-xl">

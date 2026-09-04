@@ -5,24 +5,26 @@ import { newsService } from '@/services/newsService'
 import type { NewsArticle } from '@/types/news'
 import { ArticleContent } from '@/components/news/ArticleContent'
 import { Skeleton } from '@/components/ui/Skeleton'
+import { useLanguage } from '@/context/LanguageContext'
 
 export function Article() {
   const { slug } = useParams<{ slug: string }>()
   const navigate = useNavigate()
+  const { language } = useLanguage()
   const [article, setArticle] = useState<NewsArticle | null | undefined>(null)
 
   useEffect(() => {
     if (!slug) return
     let active = true
     setArticle(null)
-    newsService.getArticleBySlug(slug).then((data) => {
+    newsService.getArticleBySlug(slug, language).then((data) => {
       if (active) setArticle(data ?? undefined)
     })
     window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior })
     return () => {
       active = false
     }
-  }, [slug])
+  }, [slug, language])
 
   if (article === undefined) {
     return (

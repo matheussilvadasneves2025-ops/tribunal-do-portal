@@ -23,13 +23,13 @@ export function AllNews() {
 
   useEffect(() => {
     let active = true
-    newsService.getAllArticles().then((data) => {
+    newsService.getAllArticles(language).then((data) => {
       if (active) setArticles(data)
     })
     return () => {
       active = false
     }
-  }, [])
+  }, [language])
 
   const categoriaAtiva = useMemo(
     () => CATEGORIES.find((c) => c.id === categoriaFiltro) ?? null,

@@ -10,24 +10,34 @@ import { Skeleton } from '@/components/ui/Skeleton'
 import { newsService } from '@/services/newsService'
 import type { NewsArticle } from '@/types/news'
 import { useT } from '@/i18n/ui'
+import { useLanguage } from '@/context/LanguageContext'
 
 const SECONDARY_PLACEHOLDER_COUNT = 5
 const MORE_NEWS_PLACEHOLDER_COUNT = 6
 
 export function Home() {
   const t = useT()
+  const { language } = useLanguage()
 
   const [articles, setArticles] = useState<NewsArticle[] | null>(null)
 
   useEffect(() => {
-    let active = true
-    newsService.getFeaturedArticles().then((data) => {
-      if (active) setArticles(data)
-    })
-    return () => {
-      active = false
-    }
-  }, [])
+
+  let active = true
+
+  newsService.getFeaturedArticles(language).then((data) => {
+
+    if (active) setArticles(data)
+
+  })
+
+  return () => {
+
+    active = false
+
+  }
+
+}, [language])
 
   return (
     <>
