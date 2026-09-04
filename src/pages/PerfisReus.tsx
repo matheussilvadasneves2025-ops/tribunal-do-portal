@@ -1,7 +1,13 @@
 import { motion } from 'framer-motion'
+
 import { REUS_PROFILES } from '@/constants/reus'
+import { useLanguage } from '@/context/LanguageContext'
+import { useT } from '@/i18n/ui'
+import { getDefendantTranslation } from '@/i18n/reus'
 
 export function PerfisReus() {
+    const t = useT()
+  const { language } = useLanguage()
   return (
     <main className="mx-auto max-w-4xl px-5 py-20 md:px-8 md:py-28">
       <motion.div
@@ -11,19 +17,26 @@ export function PerfisReus() {
         className="text-center"
       >
         <p className="font-ui text-xs uppercase tracking-[0.3em] text-[var(--color-gold)]">
-          Perfis dos Réus
+          {t('defendantProfiles')}
         </p>
         <h1 className="mt-3 font-editorial text-3xl font-bold text-[var(--color-ink)] md:text-4xl">
-          Frente a frente
+          {t('faceToFace')}
         </h1>
         <p className="mx-auto mt-4 max-w-xl font-ui text-sm leading-relaxed text-[var(--color-ink-muted)]">
-          Dois alunos interpretam as figuras centrais dos lados opostos do
-          conflito nesta reconstituição teatral.
+          {t('defendantsIntro')}
         </p>
       </motion.div>
 
       <div className="mt-14 grid gap-8 sm:grid-cols-2">
-        {REUS_PROFILES.map((reu, i) => (
+        {REUS_PROFILES.map((reu, i) => {
+  const translation = getDefendantTranslation(reu.id)
+
+  const displayReu =
+    language === 'en' && translation
+      ? { ...reu, ...translation }
+      : reu
+
+  return (
           <motion.div
             key={reu.id}
             initial={{ opacity: 0, y: 20 }}
@@ -35,8 +48,8 @@ export function PerfisReus() {
             <div className="aspect-[3/4] w-full overflow-hidden bg-[var(--color-line)]">
               {/* Substitua o src abaixo pela foto do aluno caracterizado */}
               <img
-                src={reu.photoPlaceholder}
-                alt={`${reu.studentName} caracterizado como ${reu.characterName}`}
+                src={displayReu.photoPlaceholder}
+                alt={`${displayReu.studentName} ${t('interprets')} ${displayReu.characterName}`}
                 className="h-full w-full object-cover"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none'
@@ -45,25 +58,25 @@ export function PerfisReus() {
             </div>
             <div className="p-6">
               <p className="font-ui text-[11px] uppercase tracking-[0.14em] text-[var(--color-ink-muted)]">
-                {reu.studentName} interpreta
+                {displayReu.studentName} {t('interprets')}
               </p>
               <h2 className="mt-1 font-editorial text-2xl font-bold text-[var(--color-ink)]">
-                {reu.characterName}
+                {displayReu.characterName}
               </h2>
               <p className="mt-1 font-ui text-sm font-medium text-[var(--color-gold)]">
-                {reu.characterRole}
+                {displayReu.characterRole}
               </p>
               <p className="mt-4 font-ui text-sm leading-relaxed text-[var(--color-ink-soft)]">
-                {reu.bio}
+                {displayReu.bio}
               </p>
             </div>
-          </motion.div>
-        ))}
+                  </motion.div>
+      )
+    })}
       </div>
 
       <p className="mt-14 text-center font-ui text-xs text-[var(--color-ink-muted)]">
-        Reconstituição acadêmica com fins didáticos — nenhuma fala real é
-        atribuída aqui a figuras históricas.
+        {t('defendantsFooterNote')}
       </p>
     </main>
   )
