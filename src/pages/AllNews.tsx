@@ -8,10 +8,15 @@ import { SearchBar } from '@/components/search/SearchBar'
 import { Skeleton } from '@/components/ui/Skeleton'
 import { newsService } from '@/services/newsService'
 import { PLACEHOLDER_COUNT } from '@/constants/news'
-import { CATEGORIES } from '@/constants/categories'
+import { CATEGORIES, CATEGORY_LABELS_EN, CATEGORY_DESCRIPTIONS_EN } from '@/constants/categories'
 import type { NewsArticle } from '@/types/news'
+import { useT } from '@/i18n/ui'
+import { useLanguage } from '@/context/LanguageContext'
 
 export function AllNews() {
+  const t = useT()
+  const { language } = useLanguage()
+
   const [articles, setArticles] = useState<NewsArticle[] | null>(null)
   const [searchParams, setSearchParams] = useSearchParams()
   const categoriaFiltro = searchParams.get('categoria')
@@ -51,10 +56,18 @@ export function AllNews() {
       >
         <div>
           <p className="font-ui text-xs uppercase tracking-[0.3em] text-[var(--color-gold)]">
-            {categoriaAtiva ? categoriaAtiva.label : 'Arquivo Completo'}
+            {categoriaAtiva
+  ? (t('siteName') && categoriaAtiva.id
+      ? (CATEGORY_LABELS_EN[categoriaAtiva.id] ?? categoriaAtiva.label)
+      : categoriaAtiva.label)
+  : t('fullArchive')}
           </p>
           <h1 className="mt-2 font-editorial text-3xl font-bold text-[var(--color-ink)] md:text-4xl">
-            {categoriaAtiva ? categoriaAtiva.description : 'Todas as Matérias'}
+            {categoriaAtiva
+  ? (language === 'en'
+      ? CATEGORY_DESCRIPTIONS_EN[categoriaAtiva.id] ?? categoriaAtiva.description
+      : categoriaAtiva.description)
+  : t('allArticles')}
           </h1>
         </div>
         <div className="sm:hidden">
@@ -68,7 +81,7 @@ export function AllNews() {
           className="mb-8 flex items-center gap-2 rounded-full border border-[var(--color-line-strong)] px-4 py-1.5 font-ui text-xs uppercase tracking-[0.1em] text-[var(--color-ink-muted)] transition-colors hover:border-[var(--color-gold)] hover:text-[var(--color-gold)]"
         >
           <X size={13} />
-          Limpar filtro de categoria
+          {t('clearCategoryFilter')}
         </button>
       )}
 
@@ -87,13 +100,13 @@ export function AllNews() {
       {articlesFiltrados !== null && articlesFiltrados.length === 0 && (
         <div className="mt-10 flex flex-col items-center gap-4 py-16 text-center">
           <p className="font-ui text-sm text-[var(--color-ink-muted)]">
-            Nenhuma matéria publicada nessa categoria ainda.
+            {t('noArticlesInCategory')}
           </p>
           <Link
             to="/materias"
             className="font-ui text-sm font-medium text-[var(--color-gold)] hover:underline"
           >
-            Ver todas as matérias
+            {t('seeAllArticles')}
           </Link>
         </div>
       )}

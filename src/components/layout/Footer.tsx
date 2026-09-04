@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
 import { ScrollText } from 'lucide-react'
 import { SITE_NAME, SITE_DESCRIPTION } from '@/constants/site'
+import { useT } from '@/i18n/ui'
 
 export function Footer() {
+  const t = useT()
   return (
     <footer className="mt-24 border-t border-[var(--color-line)] bg-[var(--color-paper-dark)]">
       <div className="mx-auto max-w-7xl px-5 py-14 md:px-8">
@@ -22,23 +24,23 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
             <div>
               <h5 className="font-ui text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-ink)]">
-                Navegação
+                {t('navigation')}
               </h5>
               <ul className="mt-4 space-y-2.5 font-ui text-sm text-[var(--color-ink-muted)]">
-                <li><Link to="/" className="transition-colors hover:text-[var(--color-gold)]">Início</Link></li>
-                <li><Link to="/materias" className="transition-colors hover:text-[var(--color-gold)]">Todas as Matérias</Link></li>
-                <li><Link to="/creditos" className="transition-colors hover:text-[var(--color-gold)]">Créditos</Link></li>
+                <li><Link to="/" className="transition-colors hover:text-[var(--color-gold)]">{t('navHome')}</Link></li>
+                <li><Link to="/materias" className="transition-colors hover:text-[var(--color-gold)]">{t('allArticles')}</Link></li>
+                <li><Link to="/creditos" className="transition-colors hover:text-[var(--color-gold)]">{t('navCredits')}</Link></li>
               </ul>
             </div>
 
             <div>
               <h5 className="font-ui text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-ink)]">
-                Sobre o Projeto
+                {t('aboutProjectShort')}
               </h5>
               <ul className="mt-4 space-y-2.5 font-ui text-sm text-[var(--color-ink-muted)]">
-                <li>Trabalho estudantil</li>
-                <li>Jornalismo simulado</li>
-                <li>Fins pedagógicos</li>
+                <li>{t('studentWork')}</li>
+                <li>{t('simulatedJournalism')}</li>
+                <li>{t('educationalPurposes')}</li>
               </ul>
             </div>
           </div>
@@ -46,11 +48,10 @@ export function Footer() {
 
         <div className="mt-12 border-t border-[var(--color-line)] pt-6">
           <p className="font-ui text-xs text-[var(--color-ink-muted)]">
-            © 2025 {SITE_NAME}. Todos os fatos apresentados fazem parte
-            de uma simulação acadêmica baseada em acontecimentos históricos.
+            © 2025 {SITE_NAME}. {t('footerCopyright')}
           </p>
           <p className="mt-1 font-ui text-xs text-[var(--color-ink-muted)]">
-            Todos os direitos reservados a Matheus & Jarvis.
+            {t('footerCredit')}
           </p>
         </div>
       </div>

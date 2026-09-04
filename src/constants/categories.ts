@@ -27,11 +27,19 @@ export const CATEGORY_LABELS: Record<string, string> = CATEGORIES.reduce(
   (acc, c) => ({ ...acc, [c.id]: c.label }),
   {},
 )
-export const CATEGORY_LABELS_EN: Record<string, string> = {
+export const CATEGORY_LABELS_EN:  Record<string, string> = {
+  
   julgamento: 'The Trial',
   'estrutura-tribunal': 'Tribunal Structure',
   'crimes-de-guerra': 'War Crimes',
   analise: 'Analysis & Data',
+}
+
+export const CATEGORY_DESCRIPTIONS_EN: Record<string, string> = {
+  julgamento: 'How the International Military Tribunal works and what it judges',
+  'estrutura-tribunal': 'Judges, prosecutors, defense attorneys and witnesses in the proceedings',
+  'crimes-de-guerra': 'Investigation of crimes committed by Germany and other nations during World War II',
+  analise: 'Numbers, charts and the human and material cost of the conflict',
 }
 
 export const CATEGORY_COLORS: Record<string, string> = {
